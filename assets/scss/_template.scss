@@ -1,0 +1,28 @@
+/*=========
+Font load
+===========*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Syne:wght@400..800&display=swap');
+:root {
+	--ra-inter: "Inter", sans-serif;
+	--ra-syne: "Syne", sans-serif;
+	--ra-playfair: "Playfair", serif;
+	--ra-body-c3: #46505B;
+	--ra-title-c3: #1C1C2D;
+	--ra-base-c3: #FF4A68;
+	--ra-base-c4: #85EE00;
+	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
+	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
+	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+// Responsive Variables
+$over:'(min-width: 1800px)';
+$xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs:'only screen and (min-width: 481px) and (max-width: 575px)';
+$xxs:'(max-width: 480px)';
+$xxxs:'(max-width: 360px)';
