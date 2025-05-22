@@ -107,7 +107,24 @@ Last change:    00/00/00
 		preloader: false,
 		fixedContentPos: false,
 	});
-
+	$('.marquee-left').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+	$('.marquee-right').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -138,8 +155,42 @@ Last change:    00/00/00
 			}, 700);
 		})		
 	});
-	
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var RASER = gsap.timeline({
 
+			scrollTrigger: {
+				animation: RASER,
+				trigger: '.ra-ser3-sec',
+				start: "top -35%",
+				end: "top -100%",
+				scrub: 3,
+				pin: true,
+				pinSpacing: true,
+				markers: false
+			}
+
+		});
+		RASER
+		.to( ".ra_list_1 a" , { fontWeight: 500, opacity: 1,borderColor: "#85EE00", duration: 1})
+		.to( ".ra_item_1" , { xPercent: -200, y: 50, duration: 10})
+		.to( ".ra_list_2 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
+		.to( ".ra_list_1 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
+		.to(".ra_item_2", { rotate: "-22deg", duration: 10},"<= -1")
+		.to(".ra_item_2", {y: -50, xPercent: -200,   duration: 10},"<= +1.5")
+		.to( ".ra_list_2 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
+		.to( ".ra_list_3 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
+		.to(".ra_item_3", {  rotate: "22deg", duration: 10},"<= -1")
+		.to(".ra_item_3", { xPercent: -200, y: 50,  duration: 10},"<= +1.5")
+		.to( ".ra_list_3 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
+		.to( ".ra_list_4 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
+		.to(".ra_item_4", {  rotate: "-22deg", duration: 10},"<= -1")
+		.to(".ra_item_4", { xPercent: -200, y: -50,  duration: 5},"<= +1.5")
+		.to( ".ra_list_4 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
+		.to( ".ra_list_5 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
+		.to(".ra_item_5", { rotate: "0", duration: 5},"<= -1")
+		.to(".ra_item_5", { xPercent: 0, y: -50,  duration: 5},"<= +1.5")
+		.to( ".ra_list_5 a" , { fontWeight: 400, opacity: 1, borderColor: "#85EE00", duration: 1})
+	};
 
 
 

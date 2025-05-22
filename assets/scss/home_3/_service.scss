@@ -1,0 +1,210 @@
+.ra-ser3-sec {
+	height: 1195px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		height: auto;
+	}
+}
+.ra-ser3-area-content {
+	background-color: var(--ra-title-c3);
+	.ra-ser3-bg {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img {
+			mix-blend-mode: luminosity;
+		}
+	}
+	.container {
+		max-width: 1505px;
+	}
+}
+.ra-ser3-content {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-top: 50px;
+		display: block !important;
+	}
+	.ra-btn-3 {
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			justify-content: center !important;
+		}
+	}
+}
+.ra-ser3-card-wrap {
+	margin-left: 70px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: 0;
+		gap: 40px 30px;
+		justify-content: center;
+	}
+
+}
+.ra-ser3-wrap {
+	z-index: 2;
+	position: relative;
+	.ra-sec-title3 {
+		.sec_title {
+			color: #fff;
+			margin: 0 auto;
+			max-width: 680px;
+		}
+	}
+}
+.ra-ser3-card {
+	padding: 24px;
+	max-width: 428px;
+	border-radius: 20px;
+	background: linear-gradient(329.35deg, #FF4A68 0%, #FC9C44 100%);
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 45%;
+		position: static !important;
+		transform: rotate(0) !important;
+	}
+	@media #{$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.inner-item {
+		border-radius: 20px;
+		background-color: #fff;
+		padding: 24px 24px 20px;
+		.item-img {
+			width: 100%;
+			height: 255px;
+			overflow: hidden;
+			border-radius: 12px;
+			margin-bottom: 25px;
+			background: linear-gradient(329.35deg, #FF4A68 0%, #FC9C44 100%);
+		}
+		h3 {
+			display: none;
+			font-size: 22px;
+			font-weight: 500;
+			margin-bottom: 15px;
+			color: var(--ra-title-c3);
+			font-family: var(--ra-syne);
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				display: block;
+			}
+		}
+		p {
+			padding-bottom: 20px;
+		}
+		.ser_more {
+			color: #fff;
+			width: 56px;
+			height: 56px;
+			margin: 0 auto;
+			border-radius: 100%;
+			background: linear-gradient(329.35deg, #FF4A68 0%, #FC9C44 100%);
+			i {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&:is(.ra_item_1) {
+		z-index: 5;
+		position: relative;
+	}
+	&:is(.ra_item_2) {
+		top: 0;
+		left: 0;
+		z-index: 4;
+		position: absolute;
+		transform: rotate(11deg);
+		background: linear-gradient(329.35deg, #57E8DF 0%, #6872FE 100%);
+		.inner-item { 
+			.item-img {
+				background: linear-gradient(329.35deg, #57E8DF 0%, #6872FE 100%);
+			}
+			.ser_more {
+				background: linear-gradient(329.35deg, #57E8DF 0%, #6872FE 100%);
+			}
+		}
+	}
+	&:is(.ra_item_3) {
+		top: 0;
+		left: 0;
+		z-index: 3;
+		position: absolute;
+		transform: rotate(-22deg);
+		background: linear-gradient(93.44deg, #A353FF 0.57%, #2DA9FF 99.48%);
+		.inner-item { 
+			.item-img {
+				background: linear-gradient(93.44deg, #A353FF 0.57%, #2DA9FF 99.48%);
+			}
+			.ser_more  {
+				background: linear-gradient(93.44deg, #A353FF 0.57%, #2DA9FF 99.48%);
+			}
+		}
+	}
+	&:is(.ra_item_4) {
+		top: 0;
+		left: 0;
+		z-index: 2;
+		position: absolute;
+		transform: rotate(11deg);
+		background: linear-gradient(329.35deg, #ADFB2D 0%, #35D4CA 100%);
+		.inner-item { 
+			.item-img {
+				background: linear-gradient(329.35deg, #ADFB2D 0%, #35D4CA 100%);
+			}
+			.ser_more  {
+				background: linear-gradient(329.35deg, #ADFB2D 0%, #35D4CA 100%);
+			}
+		}
+	}
+	&:is(.ra_item_5) {
+		top: 0;
+		left: 0;
+		z-index: 1;
+		position: absolute;
+		transform: rotate(22deg);
+		background: linear-gradient(329.35deg, #864AFF 0%, #EE98FF 100%);
+		.inner-item { 
+			.item-img {
+				background: linear-gradient(329.35deg, #864AFF 0%, #EE98FF 100%);
+			}
+			.ser_more  {
+				background: linear-gradient(329.35deg, #864AFF 0%, #EE98FF 100%);
+			}
+		}
+	}
+}
+.ra-ser3-list-wrap {
+	width: 100%;
+	max-width: 790px;
+	@media #{$xxl} {
+		max-width: 720px;
+	}
+	@media #{$xl} {
+		max-width: 580px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: none;
+	}
+}
+.ra-ser3-list {
+	width: 100%;
+	span {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 500;
+		padding-right: 65px;
+	}
+	a {
+		color: #fff;
+		opacity: .4;
+		width: 100%;
+		font-size: 60px;
+		letter-spacing: -2px;
+		border-bottom: 1px solid rgba(255, 255, 255, .32);
+		@media #{$xxl} {
+			font-size: 50px;
+		}
+		@media #{$xl} {
+			font-size: 45px;
+		}
+	}
+}

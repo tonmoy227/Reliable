@@ -10,9 +10,11 @@ Font load
 	--ra-title-c3: #1C1C2D;
 	--ra-base-c3: #FF4A68;
 	--ra-base-c4: #85EE00;
+	--ra-base-c5: #FC9C44;
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
+	--ra-gradient-1:  linear-gradient(90deg, var(--ra-base-c3) 0%, var(--ra-base-c5) 100%);
 }
 
 // Responsive Variables
