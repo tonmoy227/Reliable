@@ -15,7 +15,7 @@ Last change:    00/00/00
 
 // lenis-smooth-scroll
 	const lenis = new Lenis({
-		duration: .8, 
+		duration: 1.3, 
 		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
 		direction: 'vertical', 
 		smooth: true, 
@@ -159,14 +159,13 @@ Last change:    00/00/00
 		var RASER = gsap.timeline({
 
 			scrollTrigger: {
-				animation: RASER,
 				trigger: '.ra-ser3-sec',
 				start: "top -35%",
 				end: "top -100%",
 				scrub: 3,
 				pin: true,
 				pinSpacing: true,
-				markers: false
+				markers: false,
 			}
 
 		});
@@ -176,22 +175,48 @@ Last change:    00/00/00
 		.to( ".ra_list_2 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
 		.to( ".ra_list_1 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
 		.to(".ra_item_2", { rotate: "-22deg", duration: 10},"<= -1")
-		.to(".ra_item_2", {y: -50, xPercent: -200,   duration: 10},"<= +1.5")
+		.to(".ra_item_2", {y: -50, xPercent: -200,   duration: 10},"<= +2 ")
 		.to( ".ra_list_2 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
 		.to( ".ra_list_3 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
 		.to(".ra_item_3", {  rotate: "22deg", duration: 10},"<= -1")
-		.to(".ra_item_3", { xPercent: -200, y: 50,  duration: 10},"<= +1.5")
+		.to(".ra_item_3", { xPercent: -200, y: 50,  duration: 10},"<= +2 ")
 		.to( ".ra_list_3 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
 		.to( ".ra_list_4 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
 		.to(".ra_item_4", {  rotate: "-22deg", duration: 10},"<= -1")
-		.to(".ra_item_4", { xPercent: -200, y: -50,  duration: 5},"<= +1.5")
+		.to(".ra_item_4", { xPercent: -200, y: -50,  duration: 5},"<= +2 ")
 		.to( ".ra_list_4 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
 		.to( ".ra_list_5 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
 		.to(".ra_item_5", { rotate: "0", duration: 5},"<= -1")
-		.to(".ra_item_5", { xPercent: 0, y: -50,  duration: 5},"<= +1.5")
+		.to(".ra_item_5", { xPercent: 0, y: -50,  duration: 5},"<= +2 ")
 		.to( ".ra_list_5 a" , { fontWeight: 400, opacity: 1, borderColor: "#85EE00", duration: 1})
 	};
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var RACOUNT = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.ra-count3-sec',
+				start: "top 10%",
+				end: "top -100%",
+				scrub: 1,
+				pin: true,
+				pinSpacing: true,
+				markers: false,
+			}
 
+		});
+		RACOUNT
+		.from( ".ra_count_1 .item-bg" , { scale: .5, opacity: 0, duration: 1})
+		.from( ".ra_count_1 .item-text" , { y: 100, opacity: 0, duration: 1})
+		.from( ".ra_count_1 .ra_count_line" , { width: 0, force3D: true , duration: 1})
+		.from( ".ra_count_1 .item-desc" , { x: 100, opacity: 0,  duration: 1})
+		.from( ".ra_count_2 .item-bg" , { scale: .5, opacity: 0, duration: 1})
+		.from( ".ra_count_2 .item-text" , { y: 100, opacity: 0, duration: 1})
+		.from( ".ra_count_2 .ra_count_line" , { width: 0, force3D: true , duration: 1})
+		.from( ".ra_count_2 .item-desc" , { x: 100, opacity: 0,  duration: 1})
+		.from( ".ra_count_3 .item-bg" , { scale: .5, opacity: 0, duration: 1})
+		.from( ".ra_count_3 .item-text" , { y: 100, opacity: 0, duration: 1})
+		.from( ".ra_count_3 .ra_count_line" , { width: 0, force3D: true , duration: 1})
+		.from( ".ra_count_3 .item-desc" , { x: 100, opacity: 0, duration: 1})
+	};
 
 
 })(jQuery);

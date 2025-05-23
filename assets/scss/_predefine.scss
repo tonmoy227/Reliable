@@ -256,6 +256,9 @@ a {
 			-webkit-text-fill-color: transparent;
 		}
 	}
+	p {
+		padding-top: 20px;
+	}
 	&:is(.text-center) {
 		.subtitle { 
 			padding-right: 92px;

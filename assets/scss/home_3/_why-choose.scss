@@ -1,0 +1,224 @@
+.ra-wc3-sec {
+	.container {
+		max-width: 1415px;
+	}
+}
+.ra-wc3-text {
+	max-width: 645px;
+	.ra-sec-title3 {
+		.sec_title {
+			max-width: 580px;
+		}
+	}
+}
+.ra-wc3-list-item {
+	gap: 24px;
+	z-index: 1;
+	max-width: 567px;
+	position: relative;
+	margin-bottom: 28px;
+	padding: 28px 32px 25px;
+	border: 1px solid transparent;
+	background: linear-gradient(#fff, #fff) padding-box, linear-gradient(329.35deg, #57E8DF 0%, #6872FE 100%) border-box;
+	&:before,
+	&:after {
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+	}
+	&:after {
+		top: 0;
+		background: #fff;
+	}
+	&:before {
+		left: -1px;
+		top: 6px;
+		width: 101.2%;
+		background: linear-gradient(329.35deg, #57E8DF 0%, #6872FE 100%);
+	}
+	.item-icon {
+		width: 48px;
+		height: 48px;
+	}
+	.item-text {
+		max-width: 425px;
+		h3 {
+			font-size: 20px;
+			font-weight: 600;
+			padding-bottom: 10px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	&:nth-child(2) {
+		background: linear-gradient(#fff, #fff) padding-box, linear-gradient(329.35deg, #ADFB2D 0%, #35D4CA 100%) border-box;
+		&:before {
+			background: linear-gradient(329.35deg, #ADFB2D 0%, #35D4CA 100%);
+		}
+	}
+	&:nth-child(3) {
+		background: linear-gradient(#fff, #fff) padding-box, linear-gradient(93.44deg, #8215FF 0.57%, #2DA9FF 99.48%) border-box;
+		&:before {
+			background: linear-gradient(93.44deg, #8215FF 0.57%, #2DA9FF 99.48%);
+		}
+	}
+}
+.ra-wc3-content {
+	gap: 40px 0px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.ra-wc3-img-area {
+	width: 100%;
+	z-index: 1;
+	max-width: 756px;
+	.ra-wc3-shape {
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+}
+.ra-wc3-img-wrap {
+	gap: 22px;
+	max-width: 658px;
+	margin-left: 90px;
+	@media #{$sm,$xs,$xxs} {
+		margin-left: 0;
+	}
+	@media #{$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.ra-wc3-img1 {
+	width: 100%;
+	max-width: 334px;
+	.item-img {
+		background-color: #FC9C44;
+	}
+}
+.ra-wc3-img2 {
+	width: 100%;
+	max-width: 302px;
+}
+.ra-wc3-rate {
+	.inner-item {
+		width: 100%;
+		max-width: 203px;
+	}
+	.item-img {
+		width: 75px;
+	}
+	.item-text {
+		width: 128px;
+		padding-top: 22px;
+		border-top: 10px solid #6254E7;
+		box-shadow: 6px 6px 24px 0px #0000001F;
+		span {
+			font-weight: 600;
+			color: var(--ra-title-c3);
+			font-size: 24px;
+			i {
+				font-size: 20px;
+				color: #FC6917;
+			}
+		}
+	}
+}
+.ra-wc3-img-video {
+	display: inline-block;
+	.vd-play {
+		left: 0;
+		right: 0;
+		top: -65px;
+		width: 128px;
+		height: 128px;
+		margin: 0 auto;
+		position: absolute;
+		border-radius: 100%;
+		border: 4px solid #FFFFFF;
+		a {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			border-radius: 100%;
+			position: relative;
+			justify-content: center;
+			background-color: var(--ra-title-c3);
+			&:before {
+				left: 17px;
+				top: 50%;
+				width: 84px;
+				content: "";
+				height: 84px;
+				margin: 0 auto;
+				position: absolute;
+				border-radius: 100%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				border: 2px dashed #fff;
+			}
+			i {
+				width: 54px;
+				height: 54px;
+				display: flex;
+				font-size: 25px;
+				align-items: center;
+				border-radius: 100%;
+				justify-content: center;
+				color: var(--ra-title-c3);
+				background-color: var(--ra-base-c4);
+			}
+		}
+	}
+}
+.ra-wc3-qoute {
+	z-index: 1;
+	padding-left: 175px;
+	padding-right: 40px;
+	padding-bottom: 40px;
+	background-position: 0% 50%;
+	@media #{$sm,$xs,$xxs} {
+		padding-left: 20px;
+		background-color: #E9F2F4;
+		background-image: none;
+	}
+	.item-author {
+		top: -50px;
+		gap: 20px;
+		position: relative;
+		@media #{$xxs} {
+			top: 0;
+			padding-top: 40px;
+		}
+		.item-img {
+			overflow: hidden;
+			border-top-left-radius: 56px;
+			border-top-right-radius: 56px;
+		}
+		.item-text {
+			font-size: 22px;
+			font-weight: 600;
+			color: var(--ra-title-c3);
+			font-family: var(--ra-syne);
+		}
+	}
+	.item-decs {
+		font-size: 20px;
+		font-weight: 300;
+		margin-top: -28px;
+		font-style: italic;
+		letter-spacing: -1px;
+		color: var(--ra-title-c3);
+		@media #{$xxs} {
+			margin-top: 15px;
+		}
+	}
+}

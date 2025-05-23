@@ -1,5 +1,7 @@
 .ra-ser3-sec {
 	height: 1195px;
+	will-change: transform;
+	transform: translateZ(0);
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		height: auto;
 	}
@@ -172,9 +174,12 @@
 		}
 	}
 }
-.ra-ser3-list-wrap {
+.ra-ser3-list-area {
 	width: 100%;
 	max-width: 790px;
+}
+.ra-ser3-list-wrap {
+	width: 100%;
 	@media #{$xxl} {
 		max-width: 720px;
 	}
