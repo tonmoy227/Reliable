@@ -14,20 +14,17 @@ Last change:    00/00/00
 	});
 
 // lenis-smooth-scroll
-	const lenis = new Lenis({
-		duration: 1.3, 
-		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-		direction: 'vertical', 
-		smooth: true, 
-		smoothTouch: false, 
-	});
 
-	function raf(time) {
-		lenis.raf(time);
-		requestAnimationFrame(raf);
-	}
-	requestAnimationFrame(raf);
-
+	if($('#smooth-content').length){
+		ScrollSmoother.create({
+			smooth: 1,         
+			wrapper: "#smooth-wrapper",
+			content: "#smooth-content",
+			normalizeScroll: true,                 
+			ignoreMobileResize: true, 
+			effects: true,
+		});
+	};
 
 	function TXTheaderSticky() {
 		var $window = $(window);
@@ -84,7 +81,7 @@ Last change:    00/00/00
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
 	});
-	gsap.registerPlugin(ScrollTrigger);
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 	
 	// Animation
 	if($('.wow').length){
@@ -160,7 +157,7 @@ Last change:    00/00/00
 
 			scrollTrigger: {
 				trigger: '.ra-ser3-sec',
-				start: "top -35%",
+				start: "top -42%",
 				end: "top -100%",
 				scrub: 3,
 				pin: true,
@@ -217,6 +214,80 @@ Last change:    00/00/00
 		.from( ".ra_count_3 .ra_count_line" , { width: 0, force3D: true , duration: 1})
 		.from( ".ra_count_3 .item-desc" , { x: 100, opacity: 0, duration: 1})
 	};
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		const initProjectWorkflowAnimation = () => {
+			const workflowContainer = document.querySelector('.ra-project3-sec');
+			if (!workflowContainer) return;
+			const animationDuration = 1;
+			const projectSections = gsap.utils.toArray(".ra-horizontal-item");
+			const sectionStagger = animationDuration / (projectSections.length - 3);
+			const scrollAnimation = gsap.timeline({
+				scrollTrigger: {
+					trigger: workflowContainer,
+					pin: true,
+					scrub: 1,
+					start: "top -8%",
+					end: "top -100%",
+					markers: false 
+				}
+			});
+			scrollAnimation.to(projectSections, {
+				xPercent: -100 * (projectSections.length - 3),
+				duration: animationDuration,
+				ease: "power1.inOut" 
+			});
+			ScrollTrigger.addEventListener("refresh", () => console.log("ScrollTrigger refreshed"));
+		};
+		document.addEventListener('DOMContentLoaded', initProjectWorkflowAnimation);
 
+	};
+	const ProSection = document.querySelectorAll('.ra-project3-sec');
+	ProSection.forEach((box) => {
+		ScrollTrigger.create({
+			trigger: box,
+			start: "top -8%",
+			end: "bottom bottom",
+			toggleActions: 'play reverse play reverse',
+			onEnter: () => box.classList.add('in-view'),
+			onLeaveBack: () => box.classList.remove('in-view'),
+			markers: false,
+		});
+	});
+	if ($('.ra-sponsor-slider').length > 0 ) {
+		var slider = new Swiper('.ra-sponsor-slider', {
+			spaceBetween: 80,
+			slidesPerView: 6,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			speed: 400,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 6,
+				},
+				'1200': {
+					slidesPerView: 5,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				'768': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'576': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	};
 
 })(jQuery);
