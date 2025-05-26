@@ -7,8 +7,9 @@
 	.ra-pro-bg {
 		top: 0;
 		left: 0;
+
 		width: 100%;
-		z-index: -1;
+		z-index: 1;
 		height: 100%;
 	}
 	&:is(.in-view) {
@@ -256,6 +257,33 @@
 	&:nth-child(6) {
 		.ra-project3-item {
 			transform: rotate(21deg);
+		}
+	}
+}
+.ra-project3-item {
+	&:is(.has-btn) {
+		width: 100%;
+		height: 100%;
+		width: 520px;
+		display: flex;
+		box-shadow: none;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		.ra-tm3-arrow a {
+			width: 240px;
+			height: 240px;
+			&:hover {
+				&:before {
+					animation: none;
+				}
+			}
+		}
+		.ra-tm3-arrow a:before {
+			left: 0;
+			top: 20px;
+			width: 207px;
+			height: 207px;
 		}
 	}
 }

@@ -45,7 +45,7 @@ Font load
   padding-right: 16px;
 }
 .ra-header-section .dropdown:after {
-  top: 2px;
+  top: 3px;
   z-index: 2;
   right: 0px;
   content: "\f107";
@@ -113,7 +113,7 @@ Font load
 }
 .ra-header-section .dropdown-menu .dropdown-menu a {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px !important;
   font-weight: 500;
 }
 .ra-header-section .dropdown-menu li {
@@ -161,7 +161,7 @@ Font load
   border-bottom: 1px solid #f1f1f1;
   padding: 10px 0px 10px 18px !important;
   font-weight: 600 !important;
-  font-size: 13px !important;
+  font-size: 16px !important;
 }
 .ra-header-section .dropdown-menu a:before {
   width: 0 !important;
@@ -176,7 +176,7 @@ Font load
   display: none;
 }
 .ra-header-section .dropdown-menu a:hover, .ra-header-section .dropdown-menu a.active {
-  color: var(--ra-title-c1) !important;
+  color: var(--ra-base-c5) !important;
   padding-left: 30px !important;
 }
 .ra-header-section .dropdown-menu a:hover:after, .ra-header-section .dropdown-menu a.active:after {
@@ -311,6 +311,15 @@ Font load
   font-weight: 500;
   color: var(--ra-title-c3);
 }
+.ra-header-section:is(.header_style_three) .main-navigation li:hover a {
+  color: var(--ra-base-c3);
+}
+.ra-header-section:is(.header_style_three) .main-navigation li .dropdown-menu li a {
+  color: var(--ra-title-c3) !important;
+}
+.ra-header-section:is(.header_style_three) .main-navigation li .dropdown-menu li a:hover, .ra-header-section:is(.header_style_three) .main-navigation li .dropdown-menu li a:is(.active) {
+  color: var(--ra-base-c3) !important;
+}
 .ra-header-section:is(.header_style_three) .ra-header-action {
   gap: 32px;
 }
@@ -346,6 +355,11 @@ Font load
   height: 48px;
   border-radius: 100%;
   background-color: #E9EBED;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.ra-header-section:is(.header_style_three) .header-cta:hover .item-icon {
+  background-color: var(--ra-base-c5);
 }
 .ra-header-section:is(.header_style_three) .header-search {
   width: 185px;
@@ -452,6 +466,9 @@ Font load
   .ra-header-section:is(.header_style_three) .cta-btn a i {
     margin-left: 5px;
   }
+}
+.ra-header-section:is(.header_style_three) .cta-btn a:hover {
+  background-color: var(--ra-base-c3);
 }
 
 /*global area*/
@@ -4341,7 +4358,7 @@ a:hover, a:focus {
 
 .ra-sponsor-slider {
   width: 100%;
-  max-width: 1244px;
+  max-width: 1210px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .ra-sponsor-slider {
@@ -4375,7 +4392,7 @@ a:hover, a:focus {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
   height: 100%;
 }
 .ra-project3-sec:is(.in-view) .ra-horizontal-item .ra-project3-item {
@@ -4676,6 +4693,38 @@ a:hover, a:focus {
           transform: rotate(21deg);
 }
 
+.ra-project3-item:is(.has-btn) {
+  width: 100%;
+  height: 100%;
+  width: 520px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+}
+.ra-project3-item:is(.has-btn) .ra-tm3-arrow a {
+  width: 240px;
+  height: 240px;
+}
+.ra-project3-item:is(.has-btn) .ra-tm3-arrow a:hover:before {
+  -webkit-animation: none;
+          animation: none;
+}
+.ra-project3-item:is(.has-btn) .ra-tm3-arrow a:before {
+  left: 0;
+  top: 20px;
+  width: 207px;
+  height: 207px;
+}
+
 /*---------------------------------------------------- */
 /*Testimonial area*/
 /*----------------------------------------------------*/
@@ -4836,6 +4885,12 @@ a:hover, a:focus {
   font-weight: 500;
   letter-spacing: 4px;
   color: rgba(28, 28, 45, 0.4);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.ra-testi3-nav .ra-testi3-prev:hover,
+.ra-testi3-nav .ra-testi3-next:hover {
+  color: var(--ra-base-c5);
 }
 
 .ra-testi3-pagi {
@@ -4887,9 +4942,21 @@ a:hover, a:focus {
   left: -30%;
   z-index: -1;
 }
+.ra-blog-sec3 .ra-blg-bg {
+  left: 0;
+  right: 0;
+  top: -5%;
+  opacity: 0.5;
+  position: absolute;
+}
 
 .ra-blog3-top .ra-sec-title3 {
   max-width: 565px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .ra-blog3-top .ra-btn-3 {
+    margin-top: 0;
+  }
 }
 
 .ra-blog3-top {

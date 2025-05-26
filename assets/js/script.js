@@ -290,18 +290,18 @@ Last change:    00/00/00
 		});
 		RASER
 		.to( ".ra_list_1 a" , { fontWeight: 500, opacity: 1,borderColor: "#85EE00", duration: 1})
-		.to( ".ra_item_1" , { xPercent: -200, y: 50, duration: 10})
+		.to( ".ra_item_1" , { xPercent: -200, y: 50, duration: 15})
 		.to( ".ra_list_2 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
 		.to( ".ra_list_1 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
-		.to(".ra_item_2", { rotate: "-22deg", duration: 10},"<= -1")
-		.to(".ra_item_2", {y: -50, xPercent: -200,   duration: 10},"<= +2 ")
+		.to(".ra_item_2", { rotate: "-22deg", duration: 15},"<= -1")
+		.to(".ra_item_2", {y: -50, xPercent: -200,   duration: 15},"<= +2 ")
 		.to( ".ra_list_2 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
 		.to( ".ra_list_3 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
-		.to(".ra_item_3", {  rotate: "22deg", duration: 10},"<= -1")
-		.to(".ra_item_3", { xPercent: -200, y: 50,  duration: 10},"<= +2 ")
+		.to(".ra_item_3", {  rotate: "22deg", duration: 15},"<= -1")
+		.to(".ra_item_3", { xPercent: -200, y: 50,  duration: 15},"<= +2 ")
 		.to( ".ra_list_3 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
 		.to( ".ra_list_4 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
-		.to(".ra_item_4", {  rotate: "-22deg", duration: 10},"<= -1")
+		.to(".ra_item_4", {  rotate: "-22deg", duration: 15},"<= -1")
 		.to(".ra_item_4", { xPercent: -200, y: -50,  duration: 5},"<= +2 ")
 		.to( ".ra_list_4 a" , { fontWeight: 400, opacity: .4, borderColor: "rgba(255, 255, 255, .32)", duration: 1})
 		.to( ".ra_list_5 a" , { fontWeight: 500, opacity: 1, borderColor: "#85EE00", duration: 1})
@@ -327,14 +327,14 @@ Last change:    00/00/00
 		.from( ".ra_count_1 .item-text" , { y: 100, opacity: 0, duration: 1})
 		.from( ".ra_count_1 .ra_count_line" , { width: 0, force3D: true , duration: 1})
 		.from( ".ra_count_1 .item-desc" , { x: 100, opacity: 0,  duration: 1})
-		.from( ".ra_count_2 .item-bg" , { scale: .5, opacity: 0, duration: 1})
-		.from( ".ra_count_2 .item-text" , { y: 100, opacity: 0, duration: 1})
-		.from( ".ra_count_2 .ra_count_line" , { width: 0, force3D: true , duration: 1})
-		.from( ".ra_count_2 .item-desc" , { x: 100, opacity: 0,  duration: 1})
 		.from( ".ra_count_3 .item-bg" , { scale: .5, opacity: 0, duration: 1})
 		.from( ".ra_count_3 .item-text" , { y: 100, opacity: 0, duration: 1})
 		.from( ".ra_count_3 .ra_count_line" , { width: 0, force3D: true , duration: 1})
 		.from( ".ra_count_3 .item-desc" , { x: 100, opacity: 0, duration: 1})
+		.from( ".ra_count_2 .item-bg" , { scale: .5, opacity: 0, duration: 1})
+		.from( ".ra_count_2 .item-text" , { y: 100, opacity: 0, duration: 1})
+		.from( ".ra_count_2 .ra_count_line" , { width: 0, force3D: true , duration: 1})
+		.from( ".ra_count_2 .item-desc" , { x: 100, opacity: 0,  duration: 1})
 	};
 	if (window.matchMedia("(min-width: 1300px)").matches) { 
 		var RAABOUT = gsap.timeline({
@@ -428,21 +428,21 @@ Last change:    00/00/00
 		}); 
 	});
 	gsap.utils.toArray(' .bottom_text').forEach((el, index) => { 
-	let tlcta = gsap.timeline({
-		scrollTrigger: {
-			trigger: el,
-			scrub: 1.5,
-			end: "top 90%",
-			start: "top 100%",
-			toggleActions: "play none none reverse",
-			markers: false
-		}
-	})
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 90%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
 
-	tlcta
-	.set(el, {transformOrigin: 'center center'})
-	.from(el, { opacity: 0, scale: .5,  y: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
-});
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0, scale: .5,  y: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+	});
 	const boxes = gsap.utils.toArray('.txt_item_active');
 	boxes.forEach(svg => {
 		gsap.to(svg, {

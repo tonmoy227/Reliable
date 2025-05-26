@@ -10,10 +10,22 @@
 		left: -30%;
 		z-index: -1;
 	}
+	.ra-blg-bg {
+		left: 0;
+		right: 0;
+		top: -5%;
+		opacity: .5;
+		position: absolute;
+	}
 }
 .ra-blog3-top {
 	.ra-sec-title3 {
 		max-width: 565px;
+	}
+	.ra-btn-3 {
+		@media #{$sm,$xs,$xxs} { 
+			margin-top: 0;
+		}
 	}
 }
 .ra-blog3-top {
