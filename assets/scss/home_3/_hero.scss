@@ -242,6 +242,13 @@
 		box-shadow: 0px -4px 3px 0px #00000040 inset;
 		.ra-grad-circle {
 			right: -11px;
+			transition: all 500ms ease-in-out;
+		}
+		&:hover {
+			transform: translateX(11px);
+			.ra-grad-circle {
+				right: 11px;
+			}
 		}
 	}
 }

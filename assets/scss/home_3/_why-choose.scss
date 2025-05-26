@@ -1,3 +1,35 @@
+@keyframes flip {
+	0% {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+		transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	40% {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+		transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+	50% {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+		transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	80% {
+		-webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+		transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+	to {
+		-webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+		transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+}
 .ra-wc3-sec {
 	.container {
 		max-width: 1415px;
@@ -66,6 +98,11 @@
 			background: linear-gradient(93.44deg, #8215FF 0.57%, #2DA9FF 99.48%);
 		}
 	}
+	&:hover {
+		.item-icon {
+			animation: flip 1s infinite;
+		}
+	}
 }
 .ra-wc3-content {
 	gap: 40px 0px;
@@ -100,12 +137,47 @@
 	width: 100%;
 	max-width: 334px;
 	.item-img {
+		overflow: hidden;
 		background-color: #FC9C44;
+		transition: all 1500ms ease-in-out;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		img {
+			transform: scale(1.5);
+			transition: all 1000ms ease-in-out;
+		}
+	}
+	&:is(.active) {
+		.item-img {
+			transition-delay: 1000ms;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			img {
+				transition-delay: 1000ms;
+				transform: scale(1.0);
+			}
+		}
 	}
 }
 .ra-wc3-img2 {
 	width: 100%;
 	max-width: 302px;
+	.item-img {
+		transition: all 1500ms ease-in-out;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+	img {
+		transform: scale(1.5);
+		transition: all 1000ms ease-in-out;
+	}
+	&:is(.active) {
+		.item-img {
+			transition-delay: 1000ms;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			img {
+				transition-delay: 1000ms;
+				transform: scale(1.0);
+			}
+		}
+	}
 }
 .ra-wc3-rate {
 	.inner-item {
@@ -137,6 +209,7 @@
 		left: 0;
 		right: 0;
 		top: -65px;
+		z-index: 2;
 		width: 128px;
 		height: 128px;
 		margin: 0 auto;

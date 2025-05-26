@@ -1,6 +1,9 @@
 .ra-project3-sec {
 	z-index: 1;
 	background-color: #fff;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		background-color: var(--ra-title-c3); 
+	}
 	.ra-pro-bg {
 		top: 0;
 		left: 0;
@@ -31,11 +34,25 @@
 		.ra-project3-title-2 {
 			opacity: 1;
 			transition-delay: 400ms;
-			transform: translate(-70% , -90%);
+			transform: translate(-75% , -120%);
+			@media #{$xxxl} {
+				transform: translate(-60% , -95%);
+			}
+			@media #{$xxl} {
+				transform: translate(-35% , -95%);
+			}
+			@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+				display: none;
+				position: static;
+				transform: translate(0 ,0);
+			}
 		}
 		.ra-project3-content {
 			z-index: 4;
-			padding-top: 50px;
+			padding-top: 120px;
+			@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+				padding-top: 50px;
+			}
 		}
 
 	}
@@ -43,8 +60,12 @@
 .ra-project3-wrap {
 	margin: 0 auto;
 	max-width: 1560px;
+	height: 100vh;
 	border-radius: 32px;
 	transition: all 1000ms ease-in-out;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+		height: 100%;
+	}
 }
 .ra-project3-item {
 	margin: 18px;
@@ -54,6 +75,14 @@
 	padding: 40px 32px 32px;
 	transition: all 500ms ease-in-out;
 	box-shadow: -12px -6px 24px 0px #00000040;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+		margin: 0 auto;
+		margin: 20px;
+		transform: rotate(0) translateX(0) translateY(0) !important;
+	}
+	@media #{$md,$sm,$xs,$xxs} { 
+		max-width: 100%;
+	}
 	.item-text {
 		.proj-title {
 			padding-bottom: 18px;
@@ -71,6 +100,7 @@
 				font-size: 14px;
 				border-radius: 6px;
 				padding: 6px 16px;
+				margin-bottom: 3px;
 				text-transform: uppercase;
 				background-color: #E9EBED;
 			}
@@ -79,6 +109,25 @@
 	.item-img {
 		overflow: hidden;
 		border-radius: 22px;
+		@media #{$md,$sm,$xs,$xxs} { 
+			width: 100%;
+			height: 400px;
+		}
+		img {
+			transition: all 500ms ease-in-out;
+			@media #{$md,$sm,$xs,$xxs} { 
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.05);
+			}
+		}
 	}
 }
 .ra-project3-content {
@@ -91,14 +140,21 @@
 	display: flex;
 	-ms-flex-wrap: no-wrap;
 	flex-wrap: no-wrap;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+		width: 100%;
+		flex-wrap: wrap;
+	}
 }
 .ra-project3-title {
 	z-index: 5;
 	right: 55px;
-	bottom: 75px;
+	bottom: 30px;
 	position: absolute;
 	max-width: 495px;
 	transition: all 800ms ease-in-out;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+		display: none;
+	}
 	h2 {
 		color: #fff;
 		line-height: 1;
@@ -118,11 +174,38 @@
 	position: absolute;
 	max-width: 495px;
 	transition: all 800ms ease-in-out;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+		opacity: 1;
+		position: static;
+		margin-left: 30px;
+		margin-bottom: 40px;
+	}
 	h2 {
 		color: #fff;
 		line-height: 1;
 		font-size: 90px;
 		font-weight: 700;
+		@media #{$xxl} {
+			font-size: 55px;
+		}
+		@media #{$xl} {
+			font-size: 48px;
+		}
+		@media #{$lg} {
+			font-size: 45px;
+		}
+		@media #{$md,$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 36px;
+		}
+		@media #{$xxs} {
+			font-size: 32px;
+		}
+		@media #{$xxxs} {
+			font-size: 30px;
+		}
 		span {
 			font-style: italic;
 			font-family: var(--ra-playfair);
@@ -132,10 +215,19 @@
 .ra-title-bg {
 	z-index: 4;
 	right: -10%;
-	bottom: -78%;
+	bottom: -75%;
 	transition: all 800ms ease-in-out;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
+		display: none;
+	}
 }
 .ra-horizontal-item {
+	@media #{$xl,$lg} { 
+		width: 50%;
+	}
+	@media #{$md,$sm,$xs,$xxs} { 
+		width: 100%;
+	}
 	&:nth-child(1) {
 		.ra-project3-item {
 			transform: rotate(21deg);
@@ -146,7 +238,6 @@
 			transform: rotate(-21deg) translateX(-30%) translateY(-11%);
 		}
 	}
-
 	&:nth-child(3) {
 		.ra-project3-item {
 			transform: rotate(-21deg) translateX(-80%) translateY(-30%);

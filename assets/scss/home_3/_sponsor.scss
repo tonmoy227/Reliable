@@ -8,6 +8,12 @@
 	border-top: 1px solid rgba(28, 28, 45, .16);
 	border-bottom: 1px solid rgba(28, 28, 45, .16);
 }
+.ra-spon3-desc {
+	p {
+		font-size: 20px;
+		max-width: 370px;
+	}
+}
 .ra-sponsor-wrap {
 	gap: 30px;
 	@media #{$xl,$lg,$md,$sm,$xs,$xxs} { 
@@ -16,6 +22,7 @@
 	@media #{$md,$sm,$xs,$xxs} {
 		flex-wrap: wrap;
 		gap: 20px 30px;
+		justify-content: center;
 	}
 }
 .ra-sponsor-video {
@@ -77,7 +84,10 @@
 	@media #{$xl,$lg} {
 		max-width: 1050px;
 	}
-	@media #{$md,$sm,$xs,$xxs} {
-		max-width: 50%;
+	@media #{$sm,$xs} { 
+		max-width: 500px;
+	}
+	@media #{$xxs} { 
+		max-width: 400px;
 	}
 }

@@ -17,7 +17,7 @@ Last change:    00/00/00
 
 	if($('#smooth-content').length){
 		ScrollSmoother.create({
-			smooth: 1,         
+			smooth: 1.2,         
 			wrapper: "#smooth-wrapper",
 			content: "#smooth-content",
 			normalizeScroll: true,                 
@@ -54,6 +54,19 @@ Last change:    00/00/00
 		});
 	}
 	TXTheaderSticky();
+	$(window).on("scroll", function() {
+		if ($(this).scrollTop() > 200) {
+			$('.ra-scrollup').fadeIn();
+		} else {
+			$('.ra-scrollup').fadeOut();
+		}
+	});
+	$('.ra-scrollup').on("click", function()  {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
 	jQuery(window).on('scroll', function() {
 		if (jQuery(window).scrollTop() > 250) {
 			jQuery('.ag-header-section.header_style_three, .ag-header-section.header_style_four').addClass('sticky-on')
@@ -122,6 +135,11 @@ Last change:    00/00/00
 		pauseOnHover: true,
 		startVisible:true,
 	});
+	// counter-activation
+	$('.counter').counterUp({
+		delay: 20,
+		time: 5000
+	});
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -137,27 +155,131 @@ Last change:    00/00/00
 
 			}
 			setTimeout(function() {
-				if($('.hero_char').length) {
-					var txtSplit = $('.hero_char');
-					if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+				if($(".hero_title").length) {
+					var Mcoxherp = $(".hero_title");
+					if(Mcoxherp.length == 0) return; gsap.registerPlugin(SplitText); Mcoxherp.each(function(index, el) {
+
 						el.split = new SplitText(el, { 
-							type: "chars",
-							charsClass: "hr3-chars"
+							type: "lines,words,chars",
+							linesClass: "split-line",
+							charsClass: "hr3-chars-wrapper",
 						});
 						$(el).find('.hr3-chars').each(function() {
 							$(this).wrap('<div class="hr3-chars-wrapper"></div>');
 						});
+						gsap.set(el, { perspective: 400 });
+						if( $(el).hasClass('hero_title_1') ){
+							gsap.set(el.split.chars, {
+								y: 200,
+								scaleX: 0,
+								opacity: 0,
+								rotateX: "15deg"
+							});
+						}
+						if( $(el).hasClass('hero_title_2') ){
+							gsap.set(el.split.chars, {
+								x: 200,
+								scaleX: 0,
+								opacity: 0,
+							});
+						}
+						el.anim = gsap.to(el.split.chars, {
+							scrollTrigger: {
+								trigger: el,
+								start: "top 90%",
+								end: "top -100%",
+								toggleActions: "play reverse play reverse",
+								markers: false,
+							},
+							x: 0,
+							y: 0,
+							scaleX: 1,
+							opacity: 1,
+							duration: 1,
+							stagger: .2,
+							rotateX: "0",
+							ease: "back.out",
+						});
+						el.anim = gsap.to(el.split.words, {
+							scrollTrigger: {
+								trigger: el,
+								start: "top 90%",
+								end: "top -100%",
+								toggleActions: "play reverse play reverse",
+								markers: false,
+							},
+							x: 0,
+							y: 0,
+							scaleX: 1,
+							opacity: 1,
+							duration: 1,
+							stagger: .2,
+							rotateX: "0",
+							ease: "back.out",
+						});
 					});
-				}
+				};
+				const RAH1 = gsap.timeline();
+				RAH1
+				.from(".ra-hero3-sec .ra-hero3-shape img", { scaleX: 0,  yPercent: -100, duration: 3, transformOrigin: "top",  ease: "power1.out" })
+				.from(".ra-hero3-percent", {  opacity:0, xPercent: -100, duration: 3, transformOrigin: "top", ease: "bounce.out" },"<= -.5")
+				.from(".ra-hero3-desc", {  opacity:0, xPercent: 100, duration: 3, transformOrigin: "top", ease: "elastic.out(1,0.7)" },"<= .5")
+				.from(".ra-hero3-img", {  opacity:0, yPercent: 100, duration: 3, transformOrigin: "bottom", ease: "elastic.out(1,0.7)" },"<= .5")
 			}, 700);
 		})		
 	});
+	if($('.tx-split-text').length) {
+		var st = jQuery(".tx-split-text");
+		if(st.length == 0) return;
+		gsap.registerPlugin(SplitText);
+		st.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines",
+				linesClass: "split-line"
+			});
+			gsap.set(el, { perspective: 400 });
+			if( jQuery(el).hasClass('split-in-up') ){
+				gsap.set(el.split.lines, {
+					opacity: 0,
+					y: 50,
+					rotateX: "50deg",
+					ease: "back.out",
+					transformOrigin: "50% 0%"
+				});
+			}
+			if( jQuery(el).hasClass('split-in-top') ){
+				gsap.set(el.split.lines, {
+					opacity: 0,
+					yPercent: 100,
+					ease: "back.out",
+					transformOrigin: "50% 0%"
+				});
+			}
+			el.anim = gsap.to(el.split.lines, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+				},
+				x: "0",
+				y: "0",
+				rotateX: "0",
+				yPercent: 0,
+				rotationX: "0",
+				color: 'inherit',
+				webkitTextStroke: "0px white",
+				scale: 1,
+				opacity: 1,
+				duration: .5, 
+				stagger: 0.3,
+			});
+		});
+	};
 	if (window.matchMedia("(min-width: 1200px)").matches) { 
 		var RASER = gsap.timeline({
 
 			scrollTrigger: {
 				trigger: '.ra-ser3-sec',
-				start: "top -42%",
+				start: "top -30%",
 				end: "top -100%",
 				scrub: 3,
 				pin: true,
@@ -214,7 +336,22 @@ Last change:    00/00/00
 		.from( ".ra_count_3 .ra_count_line" , { width: 0, force3D: true , duration: 1})
 		.from( ".ra_count_3 .item-desc" , { x: 100, opacity: 0, duration: 1})
 	};
-	if (window.matchMedia("(min-width: 1200px)").matches) { 
+	if (window.matchMedia("(min-width: 1300px)").matches) { 
+		var RAABOUT = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.ra-about-exp3-content',
+				start: "top 40%",
+				toggleActions: 'play none none reverse',
+				markers: false,
+			}
+
+		});
+		RAABOUT
+		.from(".ra-ab3-img-wrap .item-img1 .inner-img", { opacity: 0,  y: 300, duration: 2,   ease: "elastic.out(1,0.5)" })
+		.from(".ra-ab3-img-wrap .item-img2 .inner-img", { opacity: 0,  y: 300, duration: 2,   ease: "elastic.out(1,0.5)" },"<= .5")
+		.from(".ra-ab3-img-wrap .item-img3 .inner-img", { opacity: 0,  y: 300, duration: 2,   ease: "elastic.out(1,0.5)" },"<= .5")
+	};
+	if (window.matchMedia("(min-width: 1400px)").matches) { 
 		const initProjectWorkflowAnimation = () => {
 			const workflowContainer = document.querySelector('.ra-project3-sec');
 			if (!workflowContainer) return;
@@ -226,7 +363,7 @@ Last change:    00/00/00
 					trigger: workflowContainer,
 					pin: true,
 					scrub: 1,
-					start: "top -8%",
+					start: "top -6.2%",
 					end: "top -100%",
 					markers: false 
 				}
@@ -241,16 +378,84 @@ Last change:    00/00/00
 		document.addEventListener('DOMContentLoaded', initProjectWorkflowAnimation);
 
 	};
-	const ProSection = document.querySelectorAll('.ra-project3-sec');
-	ProSection.forEach((box) => {
-		ScrollTrigger.create({
-			trigger: box,
-			start: "top -8%",
-			end: "bottom bottom",
-			toggleActions: 'play reverse play reverse',
-			onEnter: () => box.classList.add('in-view'),
-			onLeaveBack: () => box.classList.remove('in-view'),
-			markers: false,
+	if (window.matchMedia("(min-width: 1400px)").matches) { 
+		const ProSection = document.querySelectorAll('.ra-project3-sec');
+		ProSection.forEach((box) => {
+			ScrollTrigger.create({
+				trigger: box,
+				start: "top -6%",
+				end: "top -10%",
+				toggleActions: 'play reverse play reverse',
+				onEnter: () => box.classList.add('in-view'),
+				onLeaveBack: () => box.classList.remove('in-view'),
+				markers: false,
+			});
+		});
+	};
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 95%",
+				end: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: 1, y: "200"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(".img-parallax").forEach(function(container) {
+		let image = container.querySelector("img");
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				scrub: true,
+				pin: false,
+
+			},
+		}); 
+		tl.from(image, {
+			yPercent: -30,
+			ease: "none",
+		}).to(image, {
+			yPercent: 30,
+			ease: "none",
+		}); 
+	});
+	gsap.utils.toArray(' .bottom_text').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 90%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 0, scale: .5,  y: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+});
+	const boxes = gsap.utils.toArray('.txt_item_active');
+	boxes.forEach(svg => {
+		gsap.to(svg, {
+			scrollTrigger: {
+				trigger: svg,
+				start: "top 100%",
+				end: "bottom bottom",
+				toggleClass: "active",
+				duration: 3,
+				delay:1,
+				toggleActions: "play play play reverse",
+				once: true,
+			}
 		});
 	});
 	if ($('.ra-sponsor-slider').length > 0 ) {
@@ -272,14 +477,18 @@ Last change:    00/00/00
 					spaceBetween: 40,
 				},
 				'992': {
-					slidesPerView: 4,
+					slidesPerView: 5,
 					spaceBetween: 20,
 				},
 				'768': {
-					slidesPerView: 3,
+					slidesPerView: 5,
 					spaceBetween: 20,
 				},
 				'576': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'480': {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
@@ -289,5 +498,27 @@ Last change:    00/00/00
 			},
 		});
 	};
+	if($(".ra-testi3-slide").length) {
+		const swiper = new Swiper(".ra-testi3-slide" , {
+			speed: 500,
+			loop: true,
+			effect: "fade",
+			spaceBetween: 0,
+			slidesPerView: 1,
+			navigation: {
+				nextEl: ".ra-testi3-next",
+				prevEl: ".ra-testi3-prev",
+			},
+			pagination: {
+				el: ".ra-testi3-pagi",
+				clickable: true,
+			},
+		})
+	} 
+
+
+
+
+
 
 })(jQuery);

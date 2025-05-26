@@ -8,6 +8,27 @@
 		max-width: 1075px;
 		.sec_title {
 			font-size: 60px;
+			@media #{$xxl} {
+				font-size: 55px;
+			}
+			@media #{$xl} {
+				font-size: 48px;
+			}
+			@media #{$lg} {
+				font-size: 45px;
+			}
+			@media #{$md,$sm} {
+				font-size: 40px;
+			}
+			@media #{$xs} {
+				font-size: 36px;
+			}
+			@media #{$xxs} {
+				font-size: 32px;
+			}
+			@media #{$xxxs} {
+				font-size: 30px;
+			}
 		}
 	} 
 }

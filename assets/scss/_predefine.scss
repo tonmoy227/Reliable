@@ -191,6 +191,22 @@ a {
 	padding: 0;
 	z-index: 1;
 }
+.ra-scrollup {
+	width: 55px;
+	right: 20px;
+	z-index: 5;
+	height: 55px;
+	bottom: 20px;
+	display: none;
+	position: fixed;
+	border-radius: 100%;
+	line-height: 55px;
+	background-position: 120%;
+	background: var(--ra-gradient-1);
+	i {
+		color: #fff;
+	}
+}
 .tx-tab-btn {
 	.nav-tabs .nav-item.show .nav-link,
 	.nav-tabs .nav-link.active,
@@ -247,6 +263,9 @@ a {
 		line-height: 1.067;
 		letter-spacing: -2px;
 		color: var(--ra-title-c3);
+		.split-line {
+			overflow: hidden;
+		}
 		span {
 			display: inline;
 			font-style: italic;
@@ -254,6 +273,24 @@ a {
 			background: linear-gradient(92.38deg, #8215FF 15.05%, #2DA9FF 99.63%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+		}
+		@media #{$xl} {
+			font-size: 48px;
+		}
+		@media #{$lg} {
+			font-size: 45px;
+		}
+		@media #{$md,$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 36px;
+		}
+		@media #{$xxs} {
+			font-size: 32px;
+		}
+		@media #{$xxxs} {
+			font-size: 30px;
 		}
 	}
 	p {
@@ -277,8 +314,34 @@ a {
 		border-radius: 6px;
 		padding: 16px 28px;
 		background: var(--ra-gradient-1);
+		background-size: 200%, 1px;
+		span {
+			position: relative;
+			transition: transform .5s;
+			transform-origin: 50% 0;
+			transform-style: preserve-3d;
+			&:before {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				content: attr(data-text);
+				transition: color 0.5s;
+				transform: rotateX(-90deg);
+				transform-origin: 50% 0;
+				text-align: center;
+			}
+		}
 		i {
-			margin-left: 12px;
+			margin-left: 10px;
+		}
+		&:hover {
+			background-position: 120%;
+			span {
+				transform: rotateX(90deg) translateY(-12px);
+				color: inherit;
+			}
 		}
 	}
 }
