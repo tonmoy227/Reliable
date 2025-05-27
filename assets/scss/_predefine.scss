@@ -54,6 +54,19 @@ body {
 	color: var(--ra-title-c3);
 	font-family: var(--ra-syne);
 }
+.headline-4 h1,
+.headline-4 h2,
+.headline-4 h3,
+.headline-4 h4,
+.headline-4 h5,
+.headline-4 h6 {
+	margin-bottom: 0;
+	font-weight: 400;
+	line-height: 1.12;
+	letter-spacing: -1px;
+	color: var(--ra-title-c3);
+	font-family: var(--ra-manrope);
+}
 #preloader { 
 	position: fixed; 
 	left: 0;
@@ -306,6 +319,47 @@ a {
 	}
 }
 
+.ra-sec-title4 {
+	.subtitle {
+		font-size: 16px;
+		font-weight: 500;
+		position: relative;
+		padding: 2px 23px;
+		margin-bottom: 15px;
+		display: inline-block;
+		border-radius: 4px;
+		color: var(--ra-title-c3);
+		border: 1px solid transparent;
+		background: linear-gradient(#fff, #fff) padding-box, var(--ra-gradient-1) border-box;
+		&:before,
+		&:after {
+			top: 12px;
+			width: 4px;
+			height: 4px;
+			content: '';
+			position: absolute;
+			border-radius: 100%;
+			background: var(--ra-gradient-1);
+			background-size: 200%, 1px;
+		}
+		&:before {
+			left: 10px;
+		}
+		&:after {
+			right: 10px;
+		}
+	}
+	.sec_title {
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 1.125;
+		letter-spacing: -1px;
+		color: var(--ra-title-c3);
+	}
+	p {
+		padding-top: 20px;
+	}
+}
 .ra-btn-3 {
 	a {
 		color: #fff;
@@ -345,6 +399,60 @@ a {
 		}
 	}
 }
+.ra-btn-4 {
+	a {
+		img {
+			padding: 14px;
+			border-radius: 100%;
+			border: 1px solid transparent;
+			background: linear-gradient(#fff, #fff) padding-box, var(--ra-gradient-1) border-box;
+			transition: all 0.3s;
+		}
+		span {
+			z-index: 1;
+			color: #fff;
+			line-height: 1;
+			font-weight: 600;
+			position: relative;
+			padding: 18px 28px;
+			border-radius: 100px;
+			letter-spacing: -1px;
+			font-family: var(--ra-manrope);
+			background: var(--ra-gradient-2);
+			background-size: 200%, 1px;
+		}
+		>*:nth-child(1) {
+			transform: scale3d(0.5, 0.5, 1);
+			margin-inline-end: -45px;
+		}
+
+		>*:nth-child(2) {
+			transform: scale3d(1, 1, 1);
+		}
+
+		>*:nth-child(3) {
+			transform: scale3d(1, 1, 1);
+			margin-inline-start: 0;
+
+		}
+		&:hover {
+			>*:nth-child(1) {
+				transform: scale3d(1, 1, 1) rotate(-130deg);
+				margin-inline-end: 0;
+			}
+
+			>*:nth-child(2) {
+				transform: scale3d(1, 1, 1);
+			}
+
+			>*:nth-child(3) {
+				transform: scale3d(0.5, 0.5, 1) rotate(-130deg);
+				margin-inline-start: -45px;
+			}
+		}
+	}
+}
+
 // txa-common-css-start
 
 @for $i from 1 through 40 {

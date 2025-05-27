@@ -15,16 +15,16 @@ Last change:    00/00/00
 
 // lenis-smooth-scroll
 
-	if($('#smooth-content').length){
-		ScrollSmoother.create({
-			smooth: 1.2,         
-			wrapper: "#smooth-wrapper",
-			content: "#smooth-content",
-			normalizeScroll: true,                 
-			ignoreMobileResize: true, 
-			effects: true,
-		});
-	};
+	// if($('#smooth-content').length){
+	// 	ScrollSmoother.create({
+	// 		smooth: 1.2,         
+	// 		wrapper: "#smooth-wrapper",
+	// 		content: "#smooth-content",
+	// 		normalizeScroll: true,                 
+	// 		ignoreMobileResize: false, 
+	// 		effects: true,
+	// 	});
+	// };
 
 	function TXTheaderSticky() {
 		var $window = $(window);

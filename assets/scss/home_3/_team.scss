@@ -167,7 +167,7 @@
 	}
 	&.active {
 		.item-img {
-			transition-delay: 1500ms;
+			transition-delay: 800ms;
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 			img {
 				transform: scale(1);

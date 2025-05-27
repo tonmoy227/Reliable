@@ -2,19 +2,24 @@
 Font load
 ===========*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 :root {
 	--ra-inter: "Inter", sans-serif;
 	--ra-syne: "Syne", sans-serif;
 	--ra-playfair: "Playfair", serif;
+	--ra-manrope: "Manrope", sans-serif; 
 	--ra-body-c3: #46505B;
 	--ra-title-c3: #1C1C2D;
 	--ra-base-c3: #FF4A68;
 	--ra-base-c4: #85EE00;
 	--ra-base-c5: #FC9C44;
+	--ra-base-c6: #8215FF;
+	--ra-base-c7: #2DA9FF;
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
 	--ra-gradient-1: linear-gradient(90deg, var(--ra-base-c3) 0%, var(--ra-base-c5) 50%, var(--ra-base-c3));
+	--ra-gradient-2: linear-gradient(93.44deg, var(--ra-base-c6) 0.57%,var(--ra-base-c7) 99.48%);
 }
 
 // Responsive Variables

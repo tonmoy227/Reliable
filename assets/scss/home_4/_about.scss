@@ -1,0 +1,119 @@
+.ra-ab4-sec {
+	z-index: 1;
+	margin-top: -105px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-top: 0;
+		padding: 100px 0px 0px;
+	}
+	.ra-sec-title4 {
+		margin: 0 auto;
+		max-width: 670px;
+	}
+	.ra-ab4-shape {
+		top: 22%;
+		left: 0;
+		width: 100%;
+		height: 284px;
+	}
+}
+.ra-ab4-content {
+	z-index: 1;
+	.ra-ab4-img1 {
+		top: -105px;
+		right: -50px;
+		z-index: -1;
+		overflow: hidden;
+		@media #{$xl} {
+			right: -80px;
+		}
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			position: static !important;
+		}
+		.item-img {
+			left: 0;
+			bottom: 0;
+			overflow: hidden;
+			border-radius: 8px;
+			display: inline-block;
+		}
+		.ab-cta-info {
+			gap: 16px;
+			@media #{$xxs} {
+				margin-top: 20px;
+			}
+			.item-text {
+				span {
+					opacity: .64;
+					font-size: 16px;
+					padding-bottom: 5px;
+					color: var(--ra-title-c3);
+				}
+				h3 {
+					font-size: 16px;
+					font-weight: 600;
+					letter-spacing: 0px;
+					color: var(--ra-title-c3);
+					font-family: var(--ra-inter);
+				}
+			}
+			.item-icon {
+				width: 84px;
+				height: 84px;
+				border-radius: 100%;
+				border: 1px solid rgba(252, 156, 68, .5);
+				span {
+					z-index: 1;
+					width: 60px;
+					height: 60px;
+					display: flex;
+					border-radius: 100%;
+					align-items: center;
+					position: relative;
+					justify-content: center;
+					border: 1px solid rgba(252, 156, 68, .8);
+					&:before {
+						top: 50%;
+						left: 0;
+						right: 0;
+						z-index: -1;
+						width: 36px;
+						height: 36px;
+						content: '';
+						margin: 0 auto;
+						border-radius: 100%;
+						position: absolute;
+						background: var(--ra-gradient-1);
+						background-size: 200%, 1px;
+						transform: translateY(-50%);
+					}
+				}
+			}
+		}
+	}
+	.ra-ab4-img2 {
+		left: 0;
+		bottom: 0;
+		overflow: hidden;
+		border-radius: 8px;
+		display: inline-block;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			position: static !important;
+		}
+		@media #{$xxs} {
+			margin-top: 30px;
+		}
+	}
+}
+.ra-ab4-img-wrap {
+	@media #{$lg,$md,$sm,$xs} {
+		display: flex;
+		gap: 30px 40px;
+		margin-top: 40px;
+		align-items: center;
+		justify-content: center;
+	}
+	@media #{$xxs} {
+		flex-wrap: wrap;
+		margin-top: 40px;
+	}
+}
