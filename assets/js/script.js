@@ -458,6 +458,12 @@ Last change:    00/00/00
 			}
 		});
 	});
+	$('.ra-item-active').each(function() {
+		$(this).on('mouseover', function() {
+			$('.ra-item-active').removeClass('active');
+			$(this).addClass('active');
+		});
+	});
 	if ($('.ra-sponsor-slider').length > 0 ) {
 		var slider = new Swiper('.ra-sponsor-slider', {
 			spaceBetween: 80,

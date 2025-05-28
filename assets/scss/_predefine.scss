@@ -355,6 +355,24 @@ a {
 		line-height: 1.125;
 		letter-spacing: -1px;
 		color: var(--ra-title-c3);
+		@media #{$xl} {
+			font-size: 40px;
+		}
+		@media #{$lg} {
+			font-size: 38px;
+		}
+		@media #{$md,$sm} {
+			font-size: 36px;
+		}
+		@media #{$xs} {
+			font-size: 34px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+		@media #{$xxxs} {
+			font-size: 28px;
+		}
 	}
 	p {
 		padding-top: 20px;

@@ -18,6 +18,9 @@
 }
 .ra-ab4-content {
 	z-index: 1;
+	@media #{$md,$sm,$xs,$xxs} {
+		padding-bottom: 0;
+	}
 	.ra-ab4-img1 {
 		top: -105px;
 		right: -50px;
@@ -93,6 +96,7 @@
 	.ra-ab4-img2 {
 		left: 0;
 		bottom: 0;
+		z-index: -1;
 		overflow: hidden;
 		border-radius: 8px;
 		display: inline-block;
