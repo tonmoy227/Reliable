@@ -1,0 +1,114 @@
+.ra-wrp3-text-area {
+	max-width: 524px;
+}
+.ra-wrp3-content {
+	gap: 40px;
+	justify-content: space-between;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.ra-wrp3-list-wrap {
+	max-width: 575px;
+}
+.ra-wrp3-list {
+	gap: 24px;
+	position: relative;
+	margin-bottom: 48px;
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+	&:before,
+	&:after {
+		top: 58px;
+		width: 2px;
+		left: 29px;
+		opacity: .24;
+		content: '';
+		height: 100%;
+		position: absolute;
+		background-color: #0047FF;
+		transition: all 700ms ease-in-out;
+		@media #{$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
+	&:after {
+		height: 0%;
+		opacity: 1;
+	}
+	&:last-child {
+		margin-bottom: 0;
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	.item-serial {
+		z-index: 1;
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		position: relative;
+		border: 2px solid transparent;
+		background: linear-gradient(#fff, #fff) padding-box, var(--ra-gradient-2) border-box;
+		&:before {
+			top: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			z-index: -1;
+			border-radius: 100%;
+			transform: scale(0);
+			position: absolute;
+			transition: all 500ms ease-in-out;
+			background: var(--ra-gradient-2);
+		}
+	}
+	span {
+		font-size: 24px;
+		font-weight: 700;
+		font-family: var(--ra-manrope);
+		background: var(--ra-gradient-2);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.item-text {
+		max-width: 490px;
+		padding-top: 15px;
+		h3 {
+			font-size: 24px;
+			font-weight: 700;
+			position: relative;
+			margin-bottom: 16px;
+			padding-bottom: 20px;
+			color: var(--ra-title-c3);
+			&:before {
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 1px;
+				content: '';
+				opacity: .28;
+				position: absolute;
+				background: linear-gradient(90deg, #1C1C2D 0%, rgba(28, 28, 45, 0) 100%);
+			}
+		}
+	}
+	&:is(.active) {
+		&:after {
+			height: 100%;
+		}
+		.item-serial {
+			&:before {
+				transform: scale(1.0);
+			}
+			span {
+				background: linear-gradient(90deg, #fff 0%, #fff 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}

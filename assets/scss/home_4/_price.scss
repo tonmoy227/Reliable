@@ -3,6 +3,23 @@
 		margin: 0 auto;
 		max-width: 740px;
 	}
+	.ra-price-shape1 {
+		top: 0;
+		right: 20px;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+		img {
+			filter: grayscale(1);
+		}
+	}
+	.ra-price-shape2 {
+		left: 0;
+		bottom: 0;
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
+	}
 }
 .ra-price4-item {
 	border-radius: 32px;
@@ -136,6 +153,10 @@
 		border-radius: 100px;
 		letter-spacing: -1px;
 		font-family: var(--ra-manrope);
+		&:hover {
+			color: var(--ra-title-c3) !important;
+			background-color: var(--ra-base-c5) !important;
+		}
 		i {
 			margin-right: 8px;
 		}

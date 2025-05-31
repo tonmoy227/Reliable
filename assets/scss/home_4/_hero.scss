@@ -1,3 +1,25 @@
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+@keyframes flying {
+	0% {
+		-webkit-transform: translate(10px, 10px);
+		transform: translate(10px, 10px);
+	}
+	50% {
+		-webkit-transform: translate(-10px, -10px);
+		transform: translate(-10px, -10px);
+	}
+	100% {
+		-webkit-transform: translate(10px, 10px);
+		transform: translate(10px, 10px);
+	}
+}
 .ra-hero4-sec {
 	z-index: 1;
 	padding: 235px 0px 565px;
@@ -98,6 +120,9 @@
 		@media #{$md,$sm,$xs,$xxs} {
 			display: none;
 		}
+		img {
+			animation: flying 2.5s linear infinite;
+		}
 	}
 }
 .ra-hero4-text-count {
@@ -116,6 +141,7 @@
 		font-weight: 800;
 		line-height: 1.067;
 		padding-bottom: 26px;
+		letter-spacing: -3px;
 		@media #{$xxs} {
 			font-size: 40px;
 			padding-bottom: 15px;
@@ -141,6 +167,9 @@
 		}
 		.item-circle {
 			margin-left: -65px;
+			.c-img1 {
+				animation: spin 8s infinite;
+			}
 			.c-img2 {
 				left: 0;
 				top: 50%;

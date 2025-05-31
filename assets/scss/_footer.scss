@@ -171,3 +171,222 @@
 	color: rgba(255, 255, 255, .70);
 	border-top: 1px solid rgba(255, 255, 255, .20);
 }
+.ra-footer4-content {
+	z-index: 1;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+	.ra-ftr4-rocket {
+		left: 0;
+		right: 10%;
+		bottom: 100px;
+		z-index: -1;
+		text-align: center;
+		position: absolute;
+		@media #{$lg,$md,$sm,$xs,$xxs} { 
+			display: none;
+		}
+	}
+}
+.ra-ftr4-text-wrap {
+	width: 100%;
+	max-width: 764px;
+}
+.ra-ftr4-cta-title {
+	border-bottom: 1px solid rgba(255, 255, 255, .24);
+}
+.ra-ftr4-text {
+	h3 {
+		display: flex;
+		line-height: 1;
+		align-items: end;
+		max-width: 530px;
+		position: relative;
+		margin-bottom: -8px;
+		@media #{$lg,$md,$sm,$xs,$xxs} { 
+			flex-wrap: wrap;
+			margin-bottom: 0;
+		}
+		@media #{$md,$sm,$xs,$xxs} {
+			max-width: 100%;
+		}
+		span {
+			color: #fff;
+			opacity: .96;
+			font-size: 76px;
+			font-weight: 800;
+			letter-spacing: -2px;
+			@media #{$lg,$md,$sm} { 
+				font-size: 60px;
+			}
+			@media #{$xs,$xxs} { 
+				font-size: 40px;
+			}
+		}
+	}
+	.ftr-arrow {
+		right: 0;
+		bottom: 8px;
+		width: 126px;
+		height: 126px;
+		border-radius: 100%;
+		position: absolute;
+		border: 2px solid transparent;
+		background: linear-gradient(#111121, #111121) padding-box, var(--ra-gradient-2) border-box;
+		@media #{$lg,$md,$sm,$xs,$xxs} { 
+			position: static;
+			margin-top: 15px;
+		}
+		@media #{$xs,$xxs} { 
+			width: 100px;
+			height: 100px;
+		}
+		&:hover {
+			transform: rotate(360deg);
+		}
+	}
+}
+.ra-ftr4-widget {
+	.widget-title { 
+		color: #fff;
+		font-size: 24px;
+		font-weight: 700;
+		position: relative;
+		margin-bottom: 35px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #FFFFFF29;
+		&:before {
+			width: 60px;
+			bottom: -1px;
+			height: 2px;
+			content: '';
+			position: absolute;
+			background-color: #FF824D;
+		}
+	}
+	.menu-widget {
+		width: 100%;
+		max-width: 360px;
+		ul {
+			&:nth-child(2) {
+				margin-left: 40px;
+			}
+		}
+		li {
+			width: 100%;
+			margin-bottom: 15px;
+			a {
+				color: #fff;
+				&:hover {
+					color: #FF824D;
+				}
+			}
+		}
+	}
+}
+.ra-footer4-form-area {
+	width: 100%;
+	max-width: 560px;
+	padding: 55px 50px;
+	border-radius: 16px;
+	background-color: #2D343A;
+	@media #{$md,$sm} {
+		max-width: 100%;
+		margin-top: 30px;
+	}
+	@media #{$xs,$xxs} { 
+		padding: 30px 20px;
+	}
+	h3 {
+		color: #fff;
+		font-size: 32px;
+		font-weight: 700;
+		padding-bottom: 38px;
+	}
+	.input-field {
+		margin-bottom: 30px;
+		label {
+			color: #fff;
+			display: block;
+			line-height: 1;
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 2px;
+		}
+		input,textarea {
+			width: 100%;
+			height: 40px;
+			border: none;
+			background-color: transparent;
+			border-bottom: 1px solid #676869;
+			transition: all 200ms ease-in-out;
+			&::placeholder {
+				color: #676869B8;
+			}
+			&:focus {
+				border-bottom: 1px solid var(--mc-pr-c10);
+			}
+		}
+		textarea {
+			height: 75px;
+			padding-top: 10px;
+		}
+	}
+	button {
+		border: none;
+		background-color: transparent;
+		img {
+			padding: 14px;
+			border-radius: 100%;
+			background: #2D343A;
+			transition: all 0.3s;
+			border: 1px solid #FFFFFF
+		}
+		span {
+			z-index: 1;
+			color: #fff;
+			line-height: 1;
+			font-weight: 600;
+			position: relative;
+			padding: 18px 28px;
+			border-radius: 100px;
+			letter-spacing: -1px;
+			font-family: var(--ra-manrope);
+			background: #FF824D;
+		}
+		>*:nth-child(1) {
+			transform: scale3d(0.5, 0.5, 1);
+			margin-inline-end: -45px;
+		}
+
+		>*:nth-child(2) {
+			transform: scale3d(1, 1, 1);
+		}
+
+		>*:nth-child(3) {
+			transform: scale3d(1, 1, 1);
+			margin-inline-start: 0;
+
+		}
+		&:hover {
+			>*:nth-child(1) {
+				transform: scale3d(1, 1, 1) rotate(-130deg);
+				margin-inline-end: 0;
+			}
+
+			>*:nth-child(2) {
+				transform: scale3d(1, 1, 1);
+			}
+
+			>*:nth-child(3) {
+				transform: scale3d(0.5, 0.5, 1) rotate(-130deg);
+				margin-inline-start: -45px;
+			}
+		}
+	}
+}
+.ra-ftr4-copyright {
+	padding: 20px 15px;
+	color: rgba(255, 255, 255, 0.7);
+	border-top: 1px solid rgba(255, 255, 255, .20);
+}
