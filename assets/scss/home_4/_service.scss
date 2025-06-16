@@ -13,6 +13,7 @@
 	gap: 20px;
 	display: flex;
 	margin-bottom: 20px;
+	justify-content: center;
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		flex-wrap: wrap;
 		justify-content: center;
@@ -30,6 +31,7 @@
 	gap: 20px;
 	display: flex;
 	margin-bottom: 20px;
+	justify-content: center;
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		flex-wrap: wrap;
 		justify-content: center;

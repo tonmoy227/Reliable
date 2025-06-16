@@ -3,13 +3,18 @@ Font load
 ===========*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
 	--ra-inter: "Inter", sans-serif;
 	--ra-syne: "Syne", sans-serif;
 	--ra-playfair: "Playfair", serif;
 	--ra-manrope: "Manrope", sans-serif; 
+	--ra-urbanist: "Urbanist", sans-serif; 
+	--ra-body-c1: #424242;
 	--ra-body-c3: #46505B;
+	--ra-title-c1: #272938;
 	--ra-title-c3: #1C1C2D;
+	--ra-base-c1: #244cc9;
 	--ra-base-c3: #FF4A68;
 	--ra-base-c4: #85EE00;
 	--ra-base-c5: #FC9C44;

@@ -64,8 +64,11 @@
 	.ra-hr-bottom-shape1,
 	.ra-hr-bottom-shape2 {
 		left: 0;
+		right: 0;
+		margin: 0 auto;
 		width: 100%;
 		height: 100%;
+		text-align: center;
 		max-height: 820px;
 		position: absolute;
 	}
@@ -183,6 +186,11 @@
 				transform: translateY(-50%);
 				background: var(--ra-gradient-1);
 				background-size: 200%, 1px;
+			}
+		}
+		&:hover {
+			.item-circle {
+				transform: translateX(-50%);
 			}
 		}
 	}

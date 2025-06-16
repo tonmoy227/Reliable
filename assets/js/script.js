@@ -240,8 +240,30 @@ Last change:    00/00/00
 				.from(".ra-hr4-count-item.item_1", { opacity: 0,  x: -100, duration: 2, transformOrigin: "bottom",  ease: "elastic.out(1,0.7)" },"<= -.06")
 				.from(".ra-hr4-count-item.item_2", { opacity: 0,  x: -100, duration: 2, transformOrigin: "bottom",  ease: "elastic.out(1,0.7)" },"<= -.07")
 				.from(".ra-hr4-count-item.item_3", { opacity: 0,  x: -100, duration: 2, transformOrigin: "bottom",  ease: "elastic.out(1,0.7)" },"<= -.08")
+
+				if($(".ra-hero1-slide").length) {
+					var AGTh3 = new Swiper(".ra-hero1-slide", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						// autoplay: {
+						// 	delay: 4000,
+						// },
+						navigation: {
+							prevEl: ".ra-hs-prev",
+							nextEl: ".ra-hs-next",
+						},
+						pagination: {
+							el: ".ra-hs-pagi",
+							type: "fraction",
+						},
+					});
+				};
 			}, 700);
-		})		
+})		
 });
 if($('.tx-split-text').length) {
 	var st = jQuery(".tx-split-text");

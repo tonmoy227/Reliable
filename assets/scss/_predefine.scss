@@ -17,6 +17,11 @@ body {
 		--bs-gutter-x: 32px;
 	}
 }
+.home-1 {
+	font-size: 18px;
+	color: var(--ra-body-c1);
+	font-family: var(--ra-urbanist);
+}
 .home-3 {
 	font-size: 18px;
 	color: var(--ra-body-c3);
@@ -41,7 +46,16 @@ body {
 		list-style: none;
 	}
 }
-
+.headline-1 h1,
+.headline-1 h2,
+.headline-1 h3,
+.headline-1 h4,
+.headline-1 h5,
+.headline-1 h6 {
+	margin-bottom: 0;
+	line-height: 1.167;
+	font-family: var(--ra-urbanist);
+}
 .headline-3 h1,
 .headline-3 h2,
 .headline-3 h3,
@@ -376,6 +390,19 @@ a {
 	}
 	p {
 		padding-top: 20px;
+	}
+}
+.ra-btn-1 { 
+	a {
+		span {
+			gap: 10px;
+			color: #fff;
+			display: flex;
+			font-size: 15px;
+			font-weight: 800;
+			align-items: center;
+			background-color: #000000;
+		}
 	}
 }
 .ra-btn-3 {
