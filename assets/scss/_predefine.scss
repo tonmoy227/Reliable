@@ -21,6 +21,9 @@ body {
 	font-size: 18px;
 	color: var(--ra-body-c1);
 	font-family: var(--ra-urbanist);
+	.container {
+		max-width: 1430px;
+	}
 }
 .home-3 {
 	font-size: 18px;
@@ -256,7 +259,49 @@ a {
 .over-hidden {
 	overflow: hidden;
 }
-
+.ra-sec-title1 {
+	.subtitle {
+		color: #000000;
+		font-size: 15px;
+		font-weight: 600;
+		margin-bottom: 15px;
+		gap: 10px;
+	}
+	.sec_title {
+		color: #000000;
+		font-size: 60px;
+		font-weight: 800;
+		@media #{$xl} {
+			font-size: 56px;
+		}
+		@media #{$lg} {
+			font-size: 50px;
+		}
+		@media #{$md,$sm} {
+			font-size: 45px;
+		}
+		@media #{$xs} {
+			font-size: 40px;
+		}
+		@media #{$xxs} {
+			font-size: 32px;
+		}
+		@media #{$xxxs} {
+			font-size: 30px;
+		}
+	}
+	p {
+		padding-top: 25px;
+	}
+	&:is(.text-center) {
+		margin: 0 auto;
+		max-width: 710px;
+		span {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}
 .ra-sec-title3 {
 	.subtitle {
 		font-size: 16px;
@@ -400,8 +445,13 @@ a {
 			display: flex;
 			font-size: 15px;
 			font-weight: 800;
+			padding: 21px 40px;
 			align-items: center;
+			border-radius: 100px;
 			background-color: #000000;
+			@media #{$xs,$xxs} {
+				padding: 15px 30px;
+			}
 		}
 	}
 }

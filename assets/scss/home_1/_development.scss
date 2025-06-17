@@ -1,0 +1,38 @@
+.ra-development-sec {
+	background-color: #f7fbfe;
+}
+.ra-development-content {
+	gap: 40px 30px;
+	border-bottom: 1px solid #e1e1e1;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
+.ra-development-text {
+	max-width: 600px;
+}
+.ra-development-img {
+	.item-img {
+		overflow: hidden;
+		border-radius: 10px;
+		@media #{$xs,$xxs} {
+			height: 320px;
+		}
+	}
+	.item-text {
+		left: 0;
+		bottom: 0;
+		position: absolute;
+		a {
+			gap: 20px;
+			color: #072161;
+			display: flex;
+			font-size: 16px;
+			font-weight: 600;
+			padding: 16px 40px;
+			align-items: center;
+			background-color: #fff; 
+		}
+	}
+}

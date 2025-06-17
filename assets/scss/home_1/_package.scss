@@ -1,0 +1,133 @@
+.ra-package-sec {
+	z-index: 1;
+	&:before {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		z-index: -1;
+		max-height: 365px;
+		position: absolute;
+		background-color: #f7fbfe;
+	}
+}
+.ra-package-wrap {
+	max-width: 1665px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.ra-package-title {
+	padding: 70px;
+	max-width: 572px;
+	background-color: #0d2665;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	@media #{$xl} {
+		padding: 70px 40px;
+	} 
+	@media #{$xxs} {
+		padding: 40px 30px 40px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 0;
+	}
+	p {
+		color: #fff;
+		padding: 20px 0px 45px;
+	}
+	.ra-sec-title1 {
+		.subtitle {
+			color: #fff;
+		}
+		.sec_title {
+			color: #fff;
+			font-size: 50px;
+			@media #{$xxs} {
+				font-size: 35px;
+			}
+		}
+	}
+	.ra-package-btn {
+		.nav-tabs {
+			overflow: hidden;
+			display: inline-block;
+			border-radius: 100px;
+			border: 1px solid #7785a9;
+			.nav-link {
+				color: #fff;
+				width: 140px;
+				padding: 15px 0;
+				font-weight: 500;
+				transition: all 500ms ease-in-out;
+				@media #{$xxs} {
+					width: 120px;
+					font-size: 14px;
+				}
+				&:is(.active) {
+					color: #000;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+.ra-package-item-wrapper {
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.ra-package-item-tab {
+	width: 100%;
+	max-width: 1090px;
+	@media #{$lg} {
+		max-width: 100%;
+	}
+}
+.ra-package-item {
+	padding: 75px 70px 60px;
+	background-color: #edf2ff;
+	@media #{$md,$sm,$xs,$xxs} {
+		width: 100%;
+	}
+	@media #{$xl} {
+		padding: 75px 40px 60px;
+	}
+	@media #{$xxs} {
+		padding: 40px 30px 40px;
+	}
+	&:nth-child(2) {
+		background-color: #e6edff;
+	}
+	h3 {
+		color: #000000;
+		font-size: 35px;
+		font-weight: 800;
+		padding-bottom: 20px;
+		@media #{$xl} {
+			font-size: 28px;
+		}
+		@media #{$md,$sm,$xs,$xxs} {
+			font-size: 30px;
+		}
+	}
+	.item-img {
+		overflow: hidden;
+		border-radius: 15px;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+	p {
+		padding-bottom: 25px;
+	}
+	li {
+		font-weight: 500;
+		margin-bottom: 5px;
+		i {
+			margin-right: 10px;
+		}
+	}
+}

@@ -44,12 +44,7 @@
 	}
 	.ra-btn-1 {
 		span {
-			padding: 21px 40px;
-			border-radius: 100px;
 			background-color: var(--ra-base-c1);
-			@media #{$xs,$xxs} {
-				padding: 15px 30px;
-			}
 		}
 	}
 }
