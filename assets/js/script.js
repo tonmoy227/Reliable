@@ -345,6 +345,18 @@ if($('.ra-sec-title').length) {
 		
 	});
 }
+if ($(".progress-bar").length) {
+	var $progress_bar = $('.progress-bar');
+	$progress_bar.appear();
+	$(document.body).on('appear', '.progress-bar', function() {
+		var current_item = $(this);
+		if (!current_item.hasClass('appeared')) {
+			var percent = current_item.data('percent');
+			current_item.css('width', percent + '%').addClass('appeared').parent().append('<span>' + percent + '%' + '</span>');
+		}
+
+	});
+}; 
 if (window.matchMedia("(min-width: 1200px)").matches) { 
 	var RASER = gsap.timeline({
 
@@ -670,6 +682,46 @@ if ($('.ra-sponsor-slider').length > 0 ) {
 			},
 			'0': {
 				slidesPerView: 1,
+			},
+		},
+	});
+};
+if ($('.ra-sponsor-slider-2').length > 0 ) {
+	var slider = new Swiper('.ra-sponsor-slider-2', {
+		spaceBetween: 80,
+		slidesPerView: 3,
+		loop: true,
+		autoplay: {
+			enabled: true,
+			delay: 6000
+		},
+		speed: 400,
+		breakpoints: {
+			'1600': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			'992': {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			'768': {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			'576': {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			'480': {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			'0': {
+				slidesPerView: 2,
 			},
 		},
 	});
