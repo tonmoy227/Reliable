@@ -799,7 +799,43 @@ if($(".ra-blog4-slider").length) {
 		},
 	})
 }
-
+if($(".ra-testi1-slider").length) {
+	const swiper = new Swiper(".ra-testi1-slider" , {
+		speed: 500,
+		loop: true,
+		spaceBetween: 32,
+		navigation: {
+			nextEl: ".ra-testi1-next",
+			prevEl: ".ra-testi1-prev",
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1199: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+			1800: {
+				slidesPerView: 3,
+			},
+		},
+	})
+}
 
 
 })(jQuery);

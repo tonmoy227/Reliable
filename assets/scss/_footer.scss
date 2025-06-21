@@ -1,3 +1,141 @@
+.ra-footer1-content {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.ra-ftr1-widget {
+	.logo-widget {
+		max-width: 600px;
+		@media #{$xl} {
+			max-width: 500px;
+		}
+		h3 {
+			color: #fff;
+			font-size: 38px;
+			font-weight: 700;
+		}
+		.ra-ab1-list li {
+			color: #fff;
+		}
+		.ra-why-c1-text-title .item-icon-text .item-text {
+			color: #244cc9;
+			font-size: 45px;
+		}
+		.ra-why-c1-text-title {
+			margin-bottom: 0;
+			padding: 30px 0px;
+			border-bottom: none;
+			border-top: 2px solid #272938;
+			h4 {
+				color: #fff;
+				font-size: 19px;
+				font-weight: 800;
+				padding-bottom: 10px;
+			}
+			p {
+				color: #fff;
+				font-size: 17px;
+			}
+		}
+	}
+	.newslatter-widget {
+		max-width: 455px;
+		padding-left: 50px;
+		padding-right: 50px;
+		background-color: #fff;
+		.newslatter-title {
+			h3 {
+				color: #06100d;
+				font-size: 25px;
+				font-weight: 800;
+				padding-bottom: 10px;
+			}
+			p {
+				padding-top: 0;
+			}
+		}
+		input {
+			width: 100%;
+			height: 64px;
+			border: none;
+			margin-bottom: 8px;
+			border-radius: 15px;
+			padding-left: 25px;
+			background-color: #f2f2f2;
+		}
+		button {
+			color: #fff;
+			width: 100%;
+			height: 55px;
+			border: none;
+			margin-top: 10px;
+			font-weight: 600;
+			border-radius: 100px;
+			background-color: #244cc9;
+		}
+		p {
+			padding-top: 40px;
+		}
+		.footer-sponsor {
+			gap: 20px;
+			flex-wrap: wrap;
+			position: relative;
+			border-top: 1px solid #c4c3cc;
+			border-bottom: 1px solid #c4c3cc;
+			&:before {
+				top: 0;
+				left: 50%;
+				width: 1px;
+				height: 100%;
+				content: '';
+				position: absolute;
+				transform: translateX(-50%);
+				background-color: #c4c3cc;
+				@media #{$xxs} {
+					display: none;
+				}
+			}
+		}
+		span {
+			width: 100%;
+		}
+	}
+	.menu-widget {
+		padding-left: 50px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: inline-block;
+		}
+		.widget-title {
+			color: #fff;
+			font-size: 23px;
+			font-weight: 800;
+			padding-bottom: 10px;
+		}
+		li {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				color: #c4c4c4;
+				font-size: 17px;
+				padding-left: 25px;
+				position: relative; 
+				&:before {
+					top: 0;
+					left: 0;
+					color: #244cc9;
+					font-size: 17px;
+					content: "\f058";
+					position: absolute;
+					font-weight: 800;
+					font-family: 'FontAwesome';
+				}
+			}
+		}
+	}
+}
+
 .ra-footer3-sec {
 	background-color: var(--ra-title-c3);
 	.ra-ftr-bg {
