@@ -726,6 +726,41 @@ if ($('.ra-sponsor-slider-2').length > 0 ) {
 		},
 	});
 };
+if ($('.ra-price1-slide').length > 0 ) {
+	var slider = new Swiper('.ra-price1-slide', {
+		spaceBetween: 0,
+		slidesPerView: 3,
+		loop: true,
+		navigation: {
+			nextEl: ".ra-price1-next",
+			prevEl: ".ra-price1-prev",
+		},
+		speed: 1000,
+		breakpoints: {
+			'1600': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+			'992': {
+				slidesPerView: 2,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'480': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+};
 if($(".ra-testi3-slide").length) {
 	const swiper = new Swiper(".ra-testi3-slide" , {
 		speed: 500,

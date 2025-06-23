@@ -1,0 +1,144 @@
+.ra-price1-cate {
+	padding: 20px 15px;
+	background-color: var(--ra-base-c1);
+	li {
+		margin: 0px 38px;
+		position: relative;
+		@media #{$xs,$xxs} {
+			margin: 0px 15px;
+		}
+		&:before {
+			top: 0;
+			color: #fff;
+			right: -45px;
+			content: '*';
+			font-size: 30px;
+			position: absolute;
+			@media #{$xs,$xxs} {
+				display: none;
+			}
+		}
+		&:last-child {
+			&:before {
+				display: none;
+			}
+		}
+		a {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 800;
+		}
+	}
+}
+.ra-price1-content {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		gap: 30px;
+		flex-wrap: wrap;
+	}
+}
+.ra-price1-side-img {
+	width: 100%;
+	max-width: 590px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+		max-height: 350px;
+	}
+	.item-img {
+		height: 100%;
+	}
+}
+.ra-price1-slide-wrap {
+	width: 100%;
+	max-width: 1545px;
+	margin-right: -230px;
+}
+.ra-price1-item {
+	background-color: #e6edff;
+	border-right: 2px solid #fff;
+	.inner-item {
+		padding: 55px 55px 0px;
+		@media #{$xs,$xxs} {
+			padding: 40px 30px 0px;
+		}
+	}
+	.item-title {
+		span {
+			color: #fff;
+			font-size: 15px;
+			font-weight: 600;
+			padding: 6px 25px;
+			border-radius: 100px;
+			margin-bottom: 10px;
+			background-color: #7d7ae3;
+		}
+		h3 {
+			color: #191919;
+			font-size: 35px;
+			font-weight: 800;
+			padding-bottom: 22px;
+			@media #{$xs,$xxs} {
+				font-size: 26px;
+			}
+		}
+	}
+	.item-img-price {
+		padding-bottom: 50px;
+		.item-img {
+			width: 100%;
+			height: 163px;
+			max-width: 395px;
+			mask-size: cover;
+			mask-position: center center;
+			mask-image: url(../img/shape/mask.png);
+		}
+		.item-text {
+			bottom: 0;
+			left: 10px;
+			width: 122px;
+			height: 82px;
+			position: absolute;
+			border-radius: 50px;
+			display: inline-block;
+			background-color: var(--ra-base-c1);
+			.item-inner {
+				line-height: 1;
+			}
+			h3 {
+				color: #fff;
+				font-size: 25px;
+				font-weight: 800;
+				line-height: 1;
+			}
+			span {
+				color: #fff;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 1;
+			}
+		}
+	}
+	.item-list {
+		li {
+			color: #424242;
+			font-size: 19px;
+			font-weight: 800;
+			margin-bottom: 10px;
+			i {
+				margin-right: 10px;
+			}
+		}
+	}
+	.item-btn {
+		a {
+			width: 100%;
+			font-size: 16px;
+			color: #072161;
+			font-weight: 600;
+			padding: 18px 15px;
+			background-color: #fff;
+			i {
+				margin-left: 15px;
+			}
+		}
+	}
+}

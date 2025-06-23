@@ -289,6 +289,27 @@ a {
 		@media #{$xxxs} {
 			font-size: 30px;
 		}
+		&:is(.ver_2) {
+			font-size: 55px;
+			@media #{$xl} {
+				font-size: 50px;
+			}
+			@media #{$lg} {
+				font-size: 45px;
+			}
+			@media #{$md,$sm} {
+				font-size: 40px;
+			}
+			@media #{$xs} {
+				font-size: 35px;
+			}
+			@media #{$xxs} {
+				font-size: 32px;
+			}
+			@media #{$xxxs} {
+				font-size: 30px;
+			}
+		}
 	}
 	p {
 		padding-top: 25px;
@@ -446,11 +467,22 @@ a {
 			font-size: 15px;
 			font-weight: 800;
 			padding: 21px 40px;
+			white-space: nowrap;
 			align-items: center;
 			border-radius: 100px;
 			background-color: #000000;
 			@media #{$xs,$xxs} {
 				padding: 15px 30px;
+			}
+		}
+	}
+	&.ver_2 {
+		a {
+			span {
+				gap: 8px;
+				i {
+					transform: rotate(-45deg);
+				}
 			}
 		}
 	}

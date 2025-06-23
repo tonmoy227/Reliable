@@ -1,0 +1,139 @@
+.ra-about2-area {
+	margin: 0 auto;
+	max-width: 1920px;
+}
+.ra-about2-side {
+	top: 0;
+	left: -250px;
+	max-width: 460px;
+	overflow: hidden;
+	position: absolute;
+	border-radius: 10px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: none;
+	}
+}
+.ra-about2-content {
+	gap: 40px 50px;
+	@media #{$xl} {
+		gap: 40px 20px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.ra-about2-img-wrap {
+	max-width: 695px;
+}
+.ra-ab2-img-area {
+	padding-left: 230px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding-left: 0;
+	}
+	.item-img {
+		height: 375px;
+		overflow: hidden;
+		border-radius: 10px;
+	}
+	.item-text {
+		top: 30px;
+		left: 25px;
+		font-size: 16px;
+		font-weight: 600;
+		position: absolute;
+		padding: 15px 20px;
+		border-radius: 100px;
+		background-color: #fff;
+		i {
+			color: #ffb401;
+			font-size: 20px;
+			margin-right: 10px;
+		}
+	}
+}
+.ra-about2-img-counter {
+	width: 100%;
+	gap: 30px 40px;
+	border-radius: 15px;
+	padding: 28px 28px 28px 60px;
+	background-color: var(--ra-base-c1);
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.ra-about2-img-line {
+	@media #{$xl} {
+		max-width: 280px;
+	}
+	.line_item {
+		gap: 30px;
+		margin-bottom: 35px;
+		padding-bottom: 35px;
+		border-bottom: 1px solid #2861ea;
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+		.item-num {
+			width: 130px;
+			color: #fff;
+			font-size: 50px;
+			font-weight: 800;
+			white-space: nowrap;
+		}
+		.item-text {
+			color: #fff;
+			max-width: 200px;
+			font-size: 22px;
+			font-weight: 800;
+		}
+	}
+}
+.ra-about2-img-circle {
+	width: 210px;
+	height: 210px;
+	border-radius: 100%;
+	border-radius: 100%;
+	background-color: #fff;
+	border-top-left-radius: 0;
+	.inner-item {
+		width: 165px;
+		height: 165px;
+		border-radius: 100%;
+		border: 13px solid #164ac8;
+		h3 {
+			color: #171926;
+			line-height: 1;
+			font-size: 36px;
+			font-weight: 800;
+		}
+		p {
+			color: #171926;
+			font-weight: 500;
+		}
+	}
+}
+
+.ra-about2-text-wrap {
+	max-width: 645px;
+}
+.ra-ab2-list {
+	gap: 0px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		gap: 15px;
+		width: 48%;
+		font-size: 22px;
+		color: #131a20;
+		font-weight: 800;
+		margin-bottom: 30px;
+		align-items: center;
+		display: flex !important;
+		@media #{$sm,$xs,$xxs} {
+			width: 100%;
+		}
+	}
+}

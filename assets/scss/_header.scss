@@ -281,6 +281,129 @@
 			background-color: #fff;
 		}
 	}
+	&:is(.header_style_two) {
+		background-color: var(--ra-base-c1);
+		.ra-header-content {
+			margin: 0 auto;
+			max-width: 1795px;
+			padding: 10px 15px;
+		}
+		.ra-logo-menu {
+			gap: 10px;
+			z-index: 1;
+			.head-shape {
+				top: 0;
+				z-index: -1;
+				left: 83px;
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+			}
+			.brand-logo {
+				a {
+					height: 50px;
+					width: 125px;
+					display: flex;
+					align-items: center;
+					border-radius: 100px;
+					border: 2px solid #fff;
+					justify-content: center;
+					background: var(--ra-base-c1);
+				}
+			}
+			.main-navigation {
+				background: #fff;
+				border-radius: 50px;
+				padding: 11px 20px;
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+				li {
+					margin: 0px 15px;
+					@media #{$xxl,$xl} {
+						margin: 0px 10px;
+					}
+					@media #{$lg} {
+						margin: 0px 15px;
+					}
+					a {
+						color: #5c09ff;
+						font-size: 18px;
+						display: inline;
+						font-weight: 800;
+						padding-bottom: 30px;
+					}
+					&:hover {
+						a {
+							color: var(--ra-base-c3);
+						}
+					}
+					&.dropdown:after {
+						color: #5c09ff;
+					}
+					.dropdown-menu {
+						li {
+							a {
+								display: inline-block !important;
+								color: var(--ra-title-c3) !important;
+								&:hover,
+								&:is(.active) {
+									color: var(--ra-base-c3) !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.ra-social-btn {
+			z-index: 1;
+			gap: 20px;
+			.head-shape {
+				top: 0;
+				right: 111px;
+				z-index: -1;
+				@media #{$xxs} {
+					display: none;
+				}
+			}
+			.top-social {
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+				a {
+					color: #fff;
+					margin: 0px 16px;
+				}
+			}
+			.top-cta-btn {
+				gap: 10px;
+				@media #{$xxs} {
+					display: none !important;
+				}
+				button {
+					padding: 0;
+					width: 50px;
+					height: 50px;
+					border: none;
+					font-size: 16px;
+					border-radius: 100%;
+					background-color: #fff;
+				}
+				a {
+					color: #5c09ff;
+					font-weight: 700;
+					line-height: 1;
+					padding: 16px 20px;
+					border-radius: 50px;
+					background-color: #fff;
+				}
+			}
+			.ra-mobile-menu-btn button span {
+				background-color: #fff;
+			}
+		}
+	}
 	&:is(.header_style_three) {
 		padding: 28px 44px;
 		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {

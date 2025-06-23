@@ -70,7 +70,8 @@
 		font-weight: 800;
 	}
 }
-.ra-testi1 {
+.ra-testi1-nav,
+.ra-price1-nav {
 	gap: 20px;
 	.arrow-nav {
 		width: 60px;
@@ -88,4 +89,10 @@
 			background-color: var(--ra-base-c1);
 		} 
 	}
+}
+.ra-price1-nav  {
+	gap: 15px;
+	right: 30px;
+	bottom: 30px;
+	position: absolute;
 }
