@@ -1,0 +1,41 @@
+.ra-blog2-item {
+	margin-bottom: 30px;
+	.item-img {
+		margin: 0 auto;
+		overflow: hidden;
+		max-width: 445px;
+		border-radius: 15px;
+		margin-bottom: 28px;
+	}
+	.item-text {
+		span {
+			color: #000000;
+			font-size: 14px;
+			font-weight: 600;
+			padding: 8px 20px;
+			border-radius: 100px;
+			background-color: #ffce1f;
+			margin-bottom: 15px;
+		}
+		.blg_title {
+			color: #242020;
+			font-size: 30px;
+			font-weight: 900;
+			margin-bottom: 18px;
+		}
+		.item-author {
+			gap: 16px;
+			.auth-img {
+				width: 45px;
+				height: 45px;
+				overflow: hidden;
+				border-radius: 100%;
+			}
+			.auth-text {
+				color: 000000;
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+	}
+}

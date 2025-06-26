@@ -1,0 +1,116 @@
+.ra-faq2-sec {
+	.ra-sec-title1 {
+		max-width: 730px;
+	}
+} 
+.ra-faq2-content {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1105px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.accordion-item,
+	.accordion-button:not(.collapsed),
+	.accordion-button {
+		background-color: transparent;
+	}
+	.accordion-item {
+		border: none;
+		border-radius: 0;
+		border-bottom: none;
+		padding: 50px 0px 40px;
+		transition: all 500ms ease-in-out;
+		border-bottom: 1px solid #e7e7e7;
+		&:is(.faq_active) {
+			.accordion-button {
+				p {
+					padding-left: 255px;
+					max-width: 85%;
+					@media #{$lg,$md,$sm,$xs,$xxs} {
+						padding-left: 0;
+					}
+				}
+				span {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	.accordion-button {
+		padding: 0;
+		border: none;
+		font-size: 28px;
+		font-weight: 800;
+		position: relative;
+		color: #000000;
+		transition: all 500ms ease;
+		@media #{$xs,$xxs} {
+			font-size: 23px;
+		}
+		span {
+			left: 0;
+			top: -20px;
+			opacity: 0;
+			position: absolute;
+			transform: scale(0);
+			transition: all 500ms ease-in-out;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				display: none;
+			}
+		}
+		p {
+			margin-bottom: 0;
+			transition: all 500ms ease-in-out;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				max-width: 85%;
+			}
+		}
+	}
+
+	.accordion-button:focus {
+		border: none;
+		box-shadow: none;
+	}
+	.accordion-body {
+		padding-top: 0;
+		font-size: 18px;
+		padding-left: 255px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			padding-left: 0;
+			max-width: 85%;
+		}
+		p {
+			max-width: 750px;
+		}
+	}
+	.accordion-button::after {
+		right: 0;
+		top: -14px;
+		width: 50px;
+		height: 50px;
+		content: '\f107';
+		display: flex;
+		font-size: 17px;
+		font-weight: 900;
+		border-radius: 0;
+		position: absolute;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+		font-family: 'Font Awesome 6 Free';
+		transition: all 500ms ease-in-out;
+		background-image: none;
+		background-color: #f3f3f3;
+	}
+	.accordion-button:not(.collapsed) { 
+		box-shadow: none;
+		padding-bottom: 15px;
+	}
+	.accordion-button:not(.collapsed) {  
+		&:after {
+			top: 10px;
+		}
+	}
+}

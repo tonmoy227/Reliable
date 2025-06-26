@@ -1,0 +1,22 @@
+.ra-cate1-sec {
+	.ra-sec-title1 {
+		.subtitle,
+		.sec_title {
+			color: #fff;
+		}
+	}
+}
+.ra-cate1-content {
+	gap: 30px;
+	justify-content: center;
+	.ra-skill-card {
+		width: 325px;
+		height: 280px;
+		border: 1px solid #102463;
+		background-color: transparent;
+		&:hover {
+			background-color: var(--ra-base-c1);
+			border: 1px solid var(--ra-base-c1);
+		}
+	}
+}
