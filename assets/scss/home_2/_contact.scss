@@ -110,5 +110,10 @@
 		border-radius: 100px;
 		text-transform: uppercase;
 		background-color: #000000;
+		transition: all 500ms ease-in-out;
+		&:hover {
+			color: var(--ra-base-c1);
+			background-color: #fff;
+		}
 	}
 }

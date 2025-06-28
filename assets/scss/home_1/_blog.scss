@@ -16,11 +16,21 @@
 	.item-img {
 		overflow: hidden;
 		border-radius: 20px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
 	}
 	.blog_title {
 		color: #272938;
 		font-size: 32px;
 		font-weight: 800;
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 }
 .ra-blog1-item {
@@ -38,6 +48,9 @@
 		height: 190px;
 		overflow: hidden;
 		border-radius: 15px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
 	}
 	.item-text {
 		max-width: 420px;
@@ -55,5 +68,12 @@
 		font-size: 28px;
 		font-weight: 800;
 		padding-bottom: 15px;
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 }

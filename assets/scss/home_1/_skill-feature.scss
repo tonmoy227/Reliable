@@ -247,6 +247,9 @@
 	gap: 20px;
 	padding: 85px 50px;
 	border-right: 1px solid #dedede;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding: 40px 15px;
+	}
 	.item-icon {
 		color: #7141b1;
 		font-size: 30px;

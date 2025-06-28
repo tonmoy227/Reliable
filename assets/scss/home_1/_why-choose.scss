@@ -50,6 +50,10 @@
 		span {
 			width: 100%;
 			justify-content: center;
+			&:hover {
+				background-color: #000;
+				letter-spacing: 1px;
+			}
 		}
 	}
 }
@@ -91,6 +95,13 @@
 				font-size: 18px;
 				font-weight: 700;
 				align-items: center;
+			}
+			&:hover {
+				color: #fff;
+				background-color: var(--ra-base-c1);
+				span {
+					color: #fff;
+				}
 			}
 		}
 	}

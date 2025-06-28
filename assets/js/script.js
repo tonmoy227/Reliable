@@ -52,6 +52,19 @@ Last change:    00/00/00
 	$('.open_mobile_menu').on('click', function () {
 		$('body').toggleClass('mobile_menu_overlay_on');
 	});
+	jQuery(document).ready(function (o) {
+		0 < o(".navSidebar-button").length &&
+		o(".navSidebar-button").on("click", function (e) {
+			e.preventDefault(), e.stopPropagation(), o(".info-group").addClass("isActive");
+		}),
+		0 < o(".close-side-widget").length &&
+		o(".close-side-widget").on("click", function (e) {
+			e.preventDefault(), o(".info-group").removeClass("isActive");
+		}),
+		o(".xs-sidebar-widget").on("click", function (e) {
+			e.stopPropagation();
+		})
+	});
 	jQuery(".mobile-main-navigation li.dropdown").append('<span class="dropdown-btn"><i class="fas fa-angle-down"></i></span>'),
 	jQuery(".mobile-main-navigation li .dropdown-btn").on("click", function () {
 		jQuery(this).hasClass("active")
@@ -133,7 +146,7 @@ Last change:    00/00/00
 
 						el.split = new SplitText(el, { 
 							type: "lines,words,chars",
-							linesClass: "split-line",
+							linesClass: "split-lines",
 							charsClass: "hr3-chars-wrapper",
 						});
 						$(el).find('.hr3-chars').each(function() {
@@ -221,6 +234,13 @@ Last change:    00/00/00
 						});
 					});
 				}
+				const RAH3 = gsap.timeline();
+				RAH3
+				.from(".ra-hero2-img-wrap1", {  yPercent: -100, duration: 2, transformOrigin: "top",  ease: "power1.out" })
+				.from(".ra-hero2-img-wrap2", {  yPercent: 100, duration: 2, transformOrigin: "top",  ease: "power1.out" },"<= .1")
+				.from(".ra-hero2-img-wrap3", {  yPercent: -100, duration: 2, transformOrigin: "top",  ease: "power1.out" },"<= .3")
+				.from(".ra-hr2-btn-client", { opacity: 0, yPercent: 100, duration: 2, transformOrigin: "top",  ease: "power1.out" },"<= .3")
+
 				if($(".ra-hero1-slide").length) {
 					var AGTh3 = new Swiper(".ra-hero1-slide", {
 						loop: true,
@@ -229,9 +249,9 @@ Last change:    00/00/00
 						fadeEffect: {
 							crossFade: true
 						},
-						// autoplay: {
-						// 	delay: 4000,
-						// },
+						autoplay: {
+							delay: 4000,
+						},
 						navigation: {
 							prevEl: ".ra-hs-prev",
 							nextEl: ".ra-hs-next",
@@ -307,6 +327,12 @@ if($('.ra-sec-title').length) {
 				x: "-8",
 			});
 		}
+		if( $(el).hasClass('ra-sec-anim2') ){
+			gsap.set(el.split.chars, {
+				opacity: .3,
+				y: "-10",
+			});
+		}
 		el.anim = gsap.to(el.split.chars, {
 			scrollTrigger: {
 				trigger: el,
@@ -337,6 +363,38 @@ if ($(".progress-bar").length) {
 
 	});
 }; 
+gsap.utils.toArray(' .slide_view_1').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top -100%",
+			start: "top -30%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'top'})
+	.from(el, { opacity: 1, scale: 1,  y: "-=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray(' .slide_view_2').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top -100%",
+			start: "top 200%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'bottom bottom'})
+	.from(el, { opacity: 1, scale: 1, y: "+=500"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+});
 if (window.matchMedia("(min-width: 1200px)").matches) { 
 	var RASER = gsap.timeline({
 
@@ -426,7 +484,7 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 				trigger: workflowContainer,
 				pin: true,
 				scrub: 1,
-				start: "top -6.2%",
+				start: "top -2%",
 				end: "top -100%",
 				markers: false 
 			}
@@ -446,7 +504,7 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 	ProSection.forEach((box) => {
 		ScrollTrigger.create({
 			trigger: box,
-			start: "top -6%",
+			start: "top 8%",
 			end: "top -10%",
 			toggleActions: 'play reverse play reverse',
 			onEnter: () => box.classList.add('in-view'),
@@ -470,6 +528,38 @@ gsap.utils.toArray(' .top_view').forEach((el, index) => {
 	tlcta
 	.set(el, {transformOrigin: 'center center'})
 	.from(el, { opacity: 1, scale: 1, y: "200"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray(' .left_view').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 30%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 1, scale: 1, xPercent: "-100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+});
+gsap.utils.toArray(' .right_view').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1.5,
+			end: "top 30%",
+			start: "top 100%",
+			toggleActions: "play none none reverse",
+			markers: false
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.from(el, { opacity: 1,  xPercent: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
 });
 gsap.utils.toArray('.ra_left_img').forEach((el, index) => { 
 	let edImg3 = gsap.timeline({
@@ -571,6 +661,36 @@ gsap.utils.toArray(' .ra-shape-ft').forEach((el, index) => {
 	.set(el, {transformOrigin: 'right right'})
 	.fromTo(el, { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}, { clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)", duration: 1})
 });
+let imageBins = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".ra-tri-img",
+		start: "top bottom",
+		markers: false,
+		scrub: 1,
+		end: "bottom center"
+	}
+})
+imageBins.to(".ra-tri-img img", {
+	scale: 1.15,
+	duration: 1,
+});
+if (window.matchMedia("(min-width: 1200px)").matches) {
+	var collab = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ra-skill-card-wrap",
+			start: "top 90%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	collab
+	.from(".ra-drop-item", {
+		yPercent: -200,
+		ease: "bounce.inOut",
+		duration: 1.5,
+		stagger: .1,
+	})
+}
 const items = gsap.utils.toArray('.ra_pro_item_1');
 items.forEach(animateItem);
 function animateItem(el) {

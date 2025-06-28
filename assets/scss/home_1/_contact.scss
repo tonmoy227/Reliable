@@ -72,6 +72,11 @@
 			font-weight: 600;
 			padding: 15px 65px;
 			background-color: #3c67ff;
+			transition: all 500ms ease-in-out;
+			&:hover {
+				color: var(--ra-base-c1);
+				background-color: #fff;
+			}
 		}
 	}
 	a {
@@ -80,6 +85,9 @@
 		font-weight: 700;
 		i {
 			margin-left: 10px;
+		}
+		&:hover {
+			letter-spacing: 1px;
 		}
 	}
 }
@@ -116,11 +124,16 @@
 		font-weight: 600;
 		border-radius: 100px;
 		background-color: #0b1b2b;
+		transition: all 500ms ease-in-out;
 		@media #{$lg,$md,$sm,$xs,$xxs} {
 			background-color: #3c67ff;
 		}
 		i {
 			margin-left: 10px;
+		}
+		&:hover {
+			color: var(--ra-base-c1);
+			background-color: #fff;
 		}
 	}
 }

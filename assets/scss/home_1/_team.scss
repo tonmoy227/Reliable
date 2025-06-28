@@ -36,9 +36,10 @@
 		width: 100%;
 		content: '';
 		z-index: -1;
-		height: 35%;
+		height: 0%;
 		position: absolute;
 		background-color: #244cc9;
+		transition: all 1200ms ease-in-out;
 	}
 	.item-img {
 		position: relative;
@@ -58,6 +59,12 @@
 			}
 		} 
 	}
+	&:is(.active) {
+		&:before {
+			height: 35%;
+			transition-delay: 800ms;
+		}
+	}
 }
 .ra-more-btn {
 	a {
@@ -74,18 +81,26 @@
 		font-weight: 800;
 		border-radius: 100%;
 		background-color: #164ac8;
+		&:hover {
+			background-color: #000;
+		}
 	}
 }
 .ra-team1-bottom-btn {
 	a {
-		gap: 15px;
-		color: #072161;
-		display: flex;
-		font-size: 16px;
-		font-weight: 600;
-		padding: 20px 15px;
-		align-items: center;
-		justify-content: center;
+		span {
+			gap: 15px;
+			color: #072161;
+			display: flex;
+			font-size: 16px;
+			font-weight: 600;
+			padding: 20px 15px;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				letter-spacing: 2px;
+			}
+		}
 	}
 }
 .ra-team1-mem-content {

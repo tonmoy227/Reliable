@@ -22,6 +22,13 @@
 	&.ver_2 {
 		.ra-hcl-img {
 			margin-bottom: 0;
+			li {
+				opacity: 1;
+				margin-left: -12px;
+				&:nth-child(1) {
+					margin-left: 0;
+				}
+			}
 		}
 	}
 }

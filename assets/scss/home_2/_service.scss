@@ -199,6 +199,10 @@
 			border-radius: 100px;
 			white-space: nowrap;
 			background-color: var(--ra-base-c1);
+			&:hover {
+				background-color: #fff;
+				color: var(--ra-base-c1);
+			}
 		}
 	}
 	.ser-img {

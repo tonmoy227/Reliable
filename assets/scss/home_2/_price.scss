@@ -27,6 +27,9 @@
 			color: #fff;
 			font-size: 20px;
 			font-weight: 800;
+			&:hover {
+				color: #000;
+			}
 		}
 	}
 }
@@ -138,6 +141,9 @@
 			background-color: #fff;
 			i {
 				margin-left: 15px;
+			}
+			&:hover {
+				letter-spacing: 1px;
 			}
 		}
 	}

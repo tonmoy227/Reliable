@@ -6,6 +6,9 @@
 		max-width: 445px;
 		border-radius: 15px;
 		margin-bottom: 28px;
+		img {
+			transition: all 300ms ease-in-out;
+		}
 	}
 	.item-text {
 		span {
@@ -35,6 +38,13 @@
 				color: 000000;
 				font-size: 16px;
 				font-weight: 600;
+			}
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1);
 			}
 		}
 	}
