@@ -7200,7 +7200,6 @@ a:hover, a:focus {
   height: 270px;
   margin: 0 auto;
   padding-top: 70px;
-  max-width: 1920px;
   margin-top: -158px;
   position: relative;
 }
@@ -9778,6 +9777,10 @@ a:hover, a:focus {
   text-align: center;
   max-height: 820px;
   position: absolute;
+}
+.ra-hero4-sec .ra-hr-bottom-shape1 img,
+.ra-hero4-sec .ra-hr-bottom-shape2 img {
+  width: 100%;
 }
 .ra-hero4-sec .ra-hr-bottom-shape1 {
   z-index: -1;
